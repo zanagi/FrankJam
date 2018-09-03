@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4524472013611372}
   - component: {fileID: 114265967523829090}
   - component: {fileID: 114370079209270516}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EventSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 114810263653204810}
   - component: {fileID: 114664075972408260}
   - component: {fileID: 114858531482674136}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LoadingScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4413285853437264}
   - component: {fileID: 114253850864805098}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Instances
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 224459807546073628}
   - component: {fileID: 222816160171570756}
   - component: {fileID: 114239259661570336}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
