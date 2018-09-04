@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour {
     public bool IsIdle { get { return GameState == GameState.Idle; } }
 
     public int money = 2000;
+    public Transform selectableWindowTransform;
 
 	void Awake ()
     {

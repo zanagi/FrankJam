@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212866660286889006}
   - component: {fileID: 61813977176191238}
   - component: {fileID: 114245855650303966}
+  - component: {fileID: 114762293372816626}
   - component: {fileID: 114675153084086824}
   m_Layer: 0
   m_Name: ShopBasic
@@ -79,10 +80,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6461c44df83bfc4891b89fdbec0afea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  neighbors: []
-  gizmoColor: {r: 0, g: 0, b: 0, a: 0}
-  visibility: 50
-  waitTime: 5
 --- !u!114 &114675153084086824
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -128,6 +125,21 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   isSelected: 0
+--- !u!114 &114762293372816626
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1672263430648348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6785bbe9316d07d4ab92a9263fe8a7e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neighbors: []
+  gizmoColor: {r: 1, g: 0, b: 1, a: 1}
+  visibility: 50
+  waitTime: 5
 --- !u!212 &212866660286889006
 SpriteRenderer:
   m_ObjectHideFlags: 1
