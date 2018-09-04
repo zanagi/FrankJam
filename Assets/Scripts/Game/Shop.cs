@@ -28,9 +28,16 @@ public class Shop : Node {
 
         if(frank)
         {
-            if (neighbors.Count == 0)
-                neighbors.Add(frank.targetNode);
-            frank.targetNode = this;
+            var rng = Random.Range(0, 100);
+            if (rng <= visibility)
+            {
+                if (neighbors.Count == 0)
+                    neighbors.Add(frank.targetNode);
+                frank.targetNode = this;
+            } else
+            {
+                Debug.Log("Missed rng: " + name);
+            }
         }
     }
 }
