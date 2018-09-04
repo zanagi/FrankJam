@@ -27,13 +27,13 @@ public class GameManager : MonoBehaviour {
         MoneyText.SetNumber(money, true);
 	}
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (!IsIdle)
             return;
 
         Test();
-        GameCamera.HandleUpdate(Time.deltaTime);
+        GameCamera.HandleUpdate(Time.fixedDeltaTime);
     }
 
     private void Test()

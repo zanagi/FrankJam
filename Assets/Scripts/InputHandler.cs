@@ -10,6 +10,7 @@ public class InputHandler : Singleton
     public bool PreviousTouched { get; private set; }
     public bool Tapped { get { return Touched && !PreviousTouched; } }
     public bool TouchReleased { get { return !Touched && PreviousTouched; } }
+    public float Zoom { get; private set; }
 
     private bool IsPointerOverUIObject(Vector2 pos)
     {
@@ -32,6 +33,22 @@ public class InputHandler : Singleton
     public override void AssignInstance()
     {
         Instance = this;
+    }
+
+    private void Update()
+    {
+        UpdateZoom();
+    }
+
+    private void UpdateZoom()
+    {
+        if(Application.isMobilePlatform)
+        {
+            // TODO:
+        } else
+        {
+            Zoom = -Input.GetAxis("Mouse ScrollWheel");
+        }
     }
 
     public bool GetTouchPosition(int fingerId, out Vector3 touchPosition)
