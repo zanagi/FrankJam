@@ -11,16 +11,4 @@ public class MainMenu : MonoBehaviour {
     {
         LoadingScreen.Instance.LoadScene(targetScene);
     }
-
-    private void Update()
-    {
-        if (done)
-            return;
-
-        if (Input.anyKey)
-        {
-            done = true;
-            LoadScene();
-        }
-    }
 }

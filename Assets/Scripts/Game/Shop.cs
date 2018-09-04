@@ -6,6 +6,8 @@ public class Shop : Node {
 
     public float visibility = 25f;
     public float waitTime = 5f;
+    private static Shop selectedShop;
+
 
     protected override void CheckSprite() { }
     public override void CheckNeighbors() { }
@@ -34,10 +36,29 @@ public class Shop : Node {
                 if (neighbors.Count == 0)
                     neighbors.Add(frank.targetNode);
                 frank.targetNode = this;
-            } else
-            {
-                Debug.Log("Missed rng: " + name);
             }
         }
+    }
+
+    public void OnSelect()
+    {
+        var previousSelected = selectedShop;
+
+        if (previousSelected)
+        {
+            previousSelected.OnDeselect();
+
+            if (previousSelected == this)
+                return;
+        }
+        selectedShop = this;
+        Debug.Log("Select: " + name);
+    }
+
+    public void OnDeselect()
+    {
+        if (selectedShop == this)
+            selectedShop = null;
+        Debug.Log("Deselect: " + name);
     }
 }
