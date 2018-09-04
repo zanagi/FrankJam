@@ -13,8 +13,13 @@ public class GameCamera : MonoBehaviour {
         Camera = GetComponent<Camera>();
 	}
 
-    public void HandleUpdate(float time)
+    public void HandleUpdate()
     {
+    }
+
+    public void HandleFixedUpdate()
+    {
+        var time = Time.fixedDeltaTime;
         HandleZoom(time);
         HandleMove(time);
     }
@@ -22,9 +27,9 @@ public class GameCamera : MonoBehaviour {
     private void HandleZoom(float time)
     {
         var size = Camera.orthographicSize;
-
-        Camera.orthographicSize = Mathf.Clamp(size 
-            + InputHandler.Instance.Zoom * Time.deltaTime * zoomSpeed, minZoom, maxZoom);
+        var targetSize = Mathf.Clamp(size 
+            + InputHandler.Instance.Zoom * time * zoomSpeed, minZoom, maxZoom);
+        Camera.orthographicSize = Mathf.Lerp(size, targetSize, time * zoomSpeed);
     }
 
     private void HandleMove(float time)
