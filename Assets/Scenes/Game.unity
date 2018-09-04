@@ -1189,6 +1189,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1968046579}
     m_Modifications:
+    - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
+        type: 2}
+      propertyPath: neighbors.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4803389260795802, guid: d0d50474f5788ff478d37d0c28ea7886, type: 2}
       propertyPath: m_LocalPosition.x
       value: 3.46
@@ -1240,6 +1245,31 @@ Prefab:
         type: 2}
       propertyPath: m_Size.x
       value: 1.0452398
+      objectReference: {fileID: 0}
+    - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
+        type: 2}
+      propertyPath: gizmoColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
+        type: 2}
+      propertyPath: gizmoColor.g
+      value: 0.97662324
+      objectReference: {fileID: 0}
+    - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
+        type: 2}
+      propertyPath: gizmoColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
+        type: 2}
+      propertyPath: neighbors.Array.data[0]
+      value: 
+      objectReference: {fileID: 752758321}
+    - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
+        type: 2}
+      propertyPath: gizmoColor.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0d50474f5788ff478d37d0c28ea7886, type: 2}
@@ -3510,7 +3540,7 @@ Prefab:
         type: 2}
       propertyPath: neighbors.Array.data[0]
       value: 
-      objectReference: {fileID: 95164009}
+      objectReference: {fileID: 1134758764}
     - target: {fileID: 114865572373235922, guid: 15d6afa6b26993c40ada301867a8c7b9,
         type: 2}
       propertyPath: neighbors.Array.data[1]

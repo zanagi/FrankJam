@@ -3,11 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Frank : MonoBehaviour {
-
+    
     public int speed = 1;
     public Node targetNode;
+
+    [HideInInspector]
+    public float waitTime;
+
     private Node previousNode;
     private List<Node> visitedNodes;
+
+
 
 	// Use this for initialization
 	void Start ()
@@ -29,7 +35,11 @@ public class Frank : MonoBehaviour {
             if(distance < scaledSpeed)
             {
                 transform.position = targetNode.transform.position;
-                SetNextNode();
+
+                if (targetNode.Wait(this, Time.deltaTime))
+                {
+                    SetNextNode();
+                }
             } else
             {
                 transform.position += delta / distance * scaledSpeed;

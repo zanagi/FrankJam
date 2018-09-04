@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114593631816746538}
   - component: {fileID: 58529695846981490}
   - component: {fileID: 50206195673020622}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Frank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,6 +91,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   targetNode: {fileID: 0}
+  waitTime: 0
 --- !u!212 &212493109340494248
 SpriteRenderer:
   m_ObjectHideFlags: 1

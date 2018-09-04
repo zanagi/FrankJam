@@ -5,18 +5,22 @@ using UnityEngine;
 public class Node : MonoBehaviour {
 
     public List<Node> neighbors;
-    public Color gizmoColor;
-    private static readonly Color neighborColor = Color.magenta;
+    public Color gizmoColor = Color.magenta;
 
     private void Start()
     {
-        var sprite = GetComponent<SpriteRenderer>();
-        if (sprite && Application.isPlaying)
-            sprite.enabled = false;
+        CheckSprite();
         CheckNeighbors();
     }
 
-    public void CheckNeighbors()
+    protected virtual void CheckSprite()
+    {
+        var sprite = GetComponent<SpriteRenderer>();
+        if (sprite)
+            sprite.enabled = false;
+    }
+
+    public virtual void CheckNeighbors()
     {
         for (int i = 0; i < neighbors.Count; i++)
         {
@@ -26,9 +30,14 @@ public class Node : MonoBehaviour {
         }
     }
 
+    public virtual bool Wait(Frank frank, float time)
+    {
+        return true;
+    }
+
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = neighborColor;
+        Gizmos.color = gizmoColor;
         for (int i = 0; i < neighbors.Count; i++)
             Gizmos.DrawLine(transform.position, neighbors[i].transform.position);
     }
