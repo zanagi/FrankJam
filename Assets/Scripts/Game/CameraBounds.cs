@@ -12,12 +12,40 @@ public class CameraBounds : MonoBehaviour
 		Instance = this;
 	}
 
-	public Vector3 GetPosInBounds(Vector3 newPos, Vector3 offset)
+	public Vector3 GetPosInBounds(Vector3 newPos, Vector3 cameraMin, Vector3 cameraMax)
 	{
+        bool xChanged = false, yChanged = false;
 		var pos = newPos;
-		pos.x = Mathf.Clamp(pos.x, min.x + offset.x, max.x + offset.x);
-		pos.y = Mathf.Clamp(pos.y, min.y + offset.y, max.y + offset.y);
-		return pos;
+		pos.x = Mathf.Clamp(pos.x, min.x, max.x);
+		pos.y = Mathf.Clamp(pos.y, min.y, max.y);
+        var halfX = 0.5f * (cameraMax.x - cameraMin.x);
+        var halfY = 0.5f * (cameraMax.y - cameraMin.y);
+        
+        if (cameraMin.x < min.x)
+        {
+            pos.x = min.x + halfX;
+            xChanged = true;
+        }
+        if(cameraMax.x > max.x)
+        {
+            if (xChanged)
+                pos.x = 0;
+            else
+                pos.x = max.x - halfX;
+        }
+        if (cameraMin.y < min.y)
+        {
+            pos.y = min.y + halfY;
+            yChanged = true;
+        }
+        if (cameraMax.y > max.y)
+        {
+            if (yChanged)
+                pos.y = 0;
+            else
+                pos.y = max.y - halfY;
+        }
+        return pos;
 	}
 
 	private void OnDrawGizmosSelected()

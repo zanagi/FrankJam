@@ -3577,8 +3577,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 413adcb02abc34440a3425d5bf33134c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  min: {x: -4, y: -10, z: 0}
-  max: {x: 4, y: 12, z: 0}
+  min: {x: -13, y: -16, z: 0}
+  max: {x: 13, y: 17.5, z: 0}
 --- !u!4 &1035689101
 Transform:
   m_ObjectHideFlags: 0
