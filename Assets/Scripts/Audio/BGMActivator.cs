@@ -12,7 +12,6 @@ public class BGMActivator : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-		Debug.Log("activeate");
         BGMManager.Instance.SetBGM(bgmName, instant);
 		Destroy(gameObject);
 	}

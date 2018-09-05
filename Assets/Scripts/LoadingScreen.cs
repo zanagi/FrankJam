@@ -39,6 +39,8 @@ public class LoadingScreen : Singleton {
 
     public void LoadScene(string sceneName)
     {
+		if (IsLoading)
+			return;
         StartCoroutine(AnimateLoad(sceneName));
     }
 
@@ -78,5 +80,10 @@ public class LoadingScreen : Singleton {
             yield return new WaitForSecondsRealtime(frameTime);
         }
         background.gameObject.SetActive(target > 0);
-    }
+	}
+
+	public void ReloadScene()
+	{
+		LoadScene(SceneManager.GetActiveScene().name);
+	}
 }

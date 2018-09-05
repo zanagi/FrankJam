@@ -15,8 +15,9 @@ public class GameManager : MonoBehaviour {
     public GameState GameState { get; private set; }
     public MoneyText MoneyText { get; private set; }
     public bool IsIdle { get { return GameState == GameState.Idle; } }
+	public bool IsPaused { get { return GameState == GameState.Pause; } }
 
-    public int money = 2000;
+	public int money = 2000;
 	public Transform selectableWindowTransform;
 	[HideInInspector]
 	public float time;
@@ -24,8 +25,13 @@ public class GameManager : MonoBehaviour {
 	public int frankCount, startFrankCount;
 
 	// Intro
-	public Image introScreen;
+	public CanvasGroup introScreen;
+	public Button introButton;
 	public float introWaitTime, introFadeTime;
+	private bool introStarted;
+
+	// Pause
+	public GameObject pauseScreen;
 
 	void Awake ()
     {
@@ -40,13 +46,23 @@ public class GameManager : MonoBehaviour {
 		// Intro
 		GameState = GameState.Cutscene;
 		introScreen.gameObject.SetActive(true);
-		StartCoroutine(PlayIntro());
+		pauseScreen.SetActive(false);
 	}
 
-	private IEnumerator PlayIntro()
+	public void PlayIntro()
 	{
-		var t = 0.0f;
+		if (introStarted)
+			return;
+		introStarted = true;
+		introButton.interactable = introButton.GetComponent<HoverImage>().enabled = false;
+		StartCoroutine(PlayIntroCoroutine());
+	}
+
+	private IEnumerator PlayIntroCoroutine()
+	{
 		var frameTime = 0.02f;
+		/*
+		var t = 0.0f;
 		while (t <= introWaitTime)
 		{
 			if (Input.GetMouseButtonDown(0))
@@ -54,22 +70,47 @@ public class GameManager : MonoBehaviour {
 			t += frameTime;
 			yield return new WaitForSecondsRealtime(frameTime);
 		}
-
-		t = 0.0f;
-		while(t <= introFadeTime)
+		*/
+		var t2 = 0.0f;
+		while(t2 <= introFadeTime)
 		{
-			t += frameTime;
-			introScreen.SetAlpha(1.0f - t / introFadeTime);
+			t2 += frameTime;
+			introScreen.alpha = (1.0f - t2 / introFadeTime);
 			yield return new WaitForSecondsRealtime(frameTime);
 		}
 		introScreen.gameObject.SetActive(false);
 		GameState = GameState.Idle;
 	}
 
-    private void Update()
+	public void PauseGame()
+	{
+		GameState = GameState.Pause;
+		pauseScreen.SetActive(true);
+	}
+
+	public void UnpauseGame()
+	{
+		GameState = GameState.Idle;
+		pauseScreen.SetActive(false);
+	}
+
+	public void QuitGame()
+	{
+		Debug.Log("Quit");
+		Application.Quit();
+	}
+
+	public void RestartGame()
+	{
+		LoadingScreen.Instance.ReloadScene();
+	}
+
+	private void Update()
 	{
 		if (!IsIdle)
 			return;
+		if (Input.GetKeyDown(KeyCode.Escape))
+			PauseGame();
 
 		time += Time.deltaTime;
 		GameCamera.HandleUpdate();
