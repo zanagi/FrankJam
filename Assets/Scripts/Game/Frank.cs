@@ -12,15 +12,20 @@ public class Frank : MonoBehaviour {
 
     private Node previousNode;
     private List<Node> visitedNodes;
-
+    private SpriteRenderer spriteRenderer;
 
 
 	// Use this for initialization
 	void Start ()
     {
         visitedNodes = new List<Node>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         transform.position = targetNode.transform.position;
-        SetNextNode();	
+        SetNextNode();
+
+        // Animator delay
+        var animator = GetComponentInChildren<Animator>();
+        animator.Update(Random.Range(0.0f, 1.0f));
 	}
 	
 	// Update is called once per frame
@@ -44,6 +49,7 @@ public class Frank : MonoBehaviour {
             {
                 transform.position += delta / distance * scaledSpeed;
             }
+            spriteRenderer.flipX = targetNode.transform.position.x < transform.position.x;
         }
 	}
 

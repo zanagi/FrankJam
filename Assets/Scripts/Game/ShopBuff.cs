@@ -32,4 +32,9 @@ public class ShopBuff
     {
         // Do nothing for normal buffs
     }
+
+    public override string ToString()
+    {
+        return string.Format("{0} ({1})", name, cost);
+    }
 }

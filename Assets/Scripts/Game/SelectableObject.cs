@@ -17,6 +17,15 @@ public abstract class SelectableObject : MonoBehaviour
         }
     }
 
+    protected virtual void Update()
+    {
+        if(selected == this)
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+                OnDeselect();
+        }
+    }
+
     public virtual void OnSelect()
     {
         var previousSelected = selected;

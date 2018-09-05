@@ -23,7 +23,7 @@ public class Shop : SelectableObject {
 
         if(buff1.name.Length > 0)
         {
-            windowInstance.actionButton1.GetComponentInChildren<Text>().text = buff1.name;
+            windowInstance.actionButton1.GetComponentInChildren<Text>().text = buff1.ToString();
             windowInstance.actionButton1.onClick.AddListener(() => AddBuff(buff1));
         } else
         {
@@ -32,7 +32,7 @@ public class Shop : SelectableObject {
 
         if (buff2.name.Length > 0)
         {
-            windowInstance.actionButton2.GetComponentInChildren<Text>().text = buff2.name;
+            windowInstance.actionButton2.GetComponentInChildren<Text>().text = buff2.ToString();
             windowInstance.actionButton2.onClick.AddListener(() => AddBuff(buff2));
         }
         else
@@ -41,10 +41,11 @@ public class Shop : SelectableObject {
         }
     }
 
-    private void Update()
+    protected override void Update()
     {
         if (!GameManager.Instance.IsIdle)
             return;
+        base.Update();
 
         var count = buffs.Count;
         for(int i = count - 1; i >= 0; i--)
@@ -68,8 +69,11 @@ public class Shop : SelectableObject {
         }
 
         // TODO: Notification that buff is active
-        Debug.Log("Added buff: " + buff.name);
-        buffs.Add(buff.Clone());
+        if (GameManager.Instance.SpendMoney(buff.cost))
+        {
+            Debug.Log("Added buff: " + buff.name);
+            buffs.Add(buff.Clone());
+        }
     }
 
     public override void OnSelect()
