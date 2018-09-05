@@ -57,8 +57,25 @@ GameObject:
   - component: {fileID: 4413285853437264}
   - component: {fileID: 114253850864805098}
   - component: {fileID: 114695450156594638}
+  - component: {fileID: 114685979927774064}
   m_Layer: 10
   m_Name: Instances
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1401013903650766
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4385950406603684}
+  - component: {fileID: 114204171520030082}
+  m_Layer: 10
+  m_Name: ObjectPool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,6 +98,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!4 &4385950406603684
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1401013903650766}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4413285853437264}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4413285853437264
 Transform:
   m_ObjectHideFlags: 1
@@ -93,6 +123,7 @@ Transform:
   m_Children:
   - {fileID: 224363779243246384}
   - {fileID: 4524472013611372}
+  - {fileID: 4385950406603684}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -109,6 +140,19 @@ Transform:
   m_Father: {fileID: 4413285853437264}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114204171520030082
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1401013903650766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d43697f8e1b105f47a12dad10dd67ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startupPoolMode: 0
+  startupPools: []
 --- !u!114 &114239259661570336
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -195,6 +239,21 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 32
+--- !u!114 &114685979927774064
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1321798466953256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16fceb9dc46eaea4c97ce9cae8c49e78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgmChangeTime: 2
+  bgmPrefabs:
+  - {fileID: 82867776949773810, guid: 38f4533f3876e6b4fb71180c898cb5ed, type: 2}
+  - {fileID: 82867432176505744, guid: 19edd8596861cef42a99766d70ad36c3, type: 2}
 --- !u!114 &114695450156594638
 MonoBehaviour:
   m_ObjectHideFlags: 1

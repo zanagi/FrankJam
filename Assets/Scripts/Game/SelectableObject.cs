@@ -10,8 +10,11 @@ public abstract class SelectableObject : MonoBehaviour
 
     protected virtual void Start()
     {
-        if(windowPrefab)
+        if (windowPrefab)
+        {
             windowInstance = Instantiate(windowPrefab, GameManager.Instance.selectableWindowTransform);
+            windowInstance.gameObject.SetActive(false);
+        }
     }
 
     public virtual void OnSelect()
@@ -26,13 +29,39 @@ public abstract class SelectableObject : MonoBehaviour
                 return;
         }
         selected = this;
-        Debug.Log("Select: " + name);
+        ShowWindow();
     }
 
     public virtual void OnDeselect()
     {
         if (selected == this)
+        {
             selected = null;
+            HideWindow();
+        }
         Debug.Log("Deselect: " + name);
+    }
+
+    protected virtual void ShowWindow()
+    {
+        windowInstance.gameObject.SetActive(true);
+        var viewportPos = 
+            GameManager.Instance.GameCamera.Camera.WorldToViewportPoint(transform.position);
+
+        var pivot = Vector2.zero;
+        if (viewportPos.x > 0.5f)
+            pivot.x = 1;
+        if (viewportPos.y > 0.5f)
+            pivot.y = 1;
+        windowInstance.SetPivot(pivot);
+        windowInstance.transform.position =
+            GameManager.Instance.GameCamera.Camera.WorldToScreenPoint(transform.position);
+    }
+
+    protected virtual void HideWindow()
+    {
+        if (!windowInstance)
+            return;
+        windowInstance.gameObject.SetActive(false);
     }
 }

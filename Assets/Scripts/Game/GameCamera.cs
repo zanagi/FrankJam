@@ -15,13 +15,14 @@ public class GameCamera : MonoBehaviour {
 
     public void HandleUpdate()
     {
+        var time = Time.deltaTime;
+        HandleMove(time);
+        HandleZoom(time);
     }
 
     public void HandleFixedUpdate()
     {
         var time = Time.fixedDeltaTime;
-        HandleZoom(time);
-        HandleMove(time);
     }
 
     private void HandleZoom(float time)

@@ -80,6 +80,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6461c44df83bfc4891b89fdbec0afea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  windowPrefab: {fileID: 114626408086208134, guid: 6b55c98b5ad09a54b99e368f1d4d3fd9,
+    type: 2}
+  shopName: Test
+  description: Just a shop
 --- !u!114 &114675153084086824
 MonoBehaviour:
   m_ObjectHideFlags: 1
