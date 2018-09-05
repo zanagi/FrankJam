@@ -16,7 +16,11 @@ public class GameManager : MonoBehaviour {
     public bool IsIdle { get { return GameState == GameState.Idle; } }
 
     public int money = 2000;
-    public Transform selectableWindowTransform;
+	public Transform selectableWindowTransform;
+	[HideInInspector]
+	public float time;
+	[HideInInspector]
+	public int frankCount, startFrankCount;
 
 	void Awake ()
     {
@@ -26,11 +30,16 @@ public class GameManager : MonoBehaviour {
         GameCamera = GetComponentInChildren<GameCamera>();
         MoneyText = GetComponentInChildren<MoneyText>();
         MoneyText.SetNumber(money, true);
+		frankCount = startFrankCount = FindObjectsOfType<Frank>().Length;
 	}
 
     private void Update()
-    {
-        GameCamera.HandleUpdate();
+	{
+		if (!IsIdle)
+			return;
+
+		time += Time.deltaTime;
+		GameCamera.HandleUpdate();
     }
 
     private void FixedUpdate()

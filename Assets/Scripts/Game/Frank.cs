@@ -12,14 +12,13 @@ public class Frank : MonoBehaviour {
 
     private Node previousNode;
     private List<Node> visitedNodes;
-    private SpriteRenderer spriteRenderer;
+    public SpriteRenderer spriteRenderer;
 
 
 	// Use this for initialization
 	void Start ()
     {
         visitedNodes = new List<Node>();
-        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         transform.position = targetNode.transform.position;
         SetNextNode();
 

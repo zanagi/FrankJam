@@ -18,8 +18,8 @@ public class MoneyText : MonoBehaviour {
         else if (currentNumber > targetNumber)
             delta = -Mathf.Min(deltaSpeed, currentNumber - targetNumber);
         currentNumber += delta;
-        text.text = currentNumber.ToString();
-    }
+		SetText();
+	}
 
     public void SetNumber(int number, bool skip = false)
     {
@@ -30,7 +30,12 @@ public class MoneyText : MonoBehaviour {
         if(skip)
         {
             currentNumber = number;
-            text.text = number.ToString();
+			SetText();
         }
     }
+
+	private void SetText()
+	{
+		text.text = string.Format("{0} MK", currentNumber);
+	}
 }
