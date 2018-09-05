@@ -15,6 +15,7 @@ public class Frank : MonoBehaviour {
     private List<Node> visitedNodes;
 	private Animator animator;
 	private float animatorSpeed;
+	private static readonly string frontBool = "Front";
 
 	// Use this for initialization
 	void Start ()
@@ -57,7 +58,17 @@ public class Frank : MonoBehaviour {
             {
                 transform.position += delta / distance * scaledSpeed;
             }
-            spriteRenderer.flipX = targetNode.transform.position.x < transform.position.x;
+			var angle = Mathf.Min(Vector2.Angle(Vector2.right, delta), Vector2.Angle(Vector2.left, delta));
+
+			if (angle <= 45)
+			{
+				animator.SetBool(frontBool, false);
+				spriteRenderer.flipX = targetNode.transform.position.x < transform.position.x;
+			} else
+			{
+				animator.SetBool(frontBool, true);
+				spriteRenderer.flipX = false;
+			}
         }
 	}
 
