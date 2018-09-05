@@ -38,16 +38,17 @@ public class GameManager : MonoBehaviour {
         if (!IsIdle)
             return;
 
-        Test();
         GameCamera.HandleFixedUpdate();
     }
 
-    private void Test()
+    public bool SpendMoney(int moneySpent)
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if(money >= moneySpent)
         {
-            money -= 100;
+            money -= moneySpent;
             MoneyText.SetNumber(money);
+            return true;
         }
+        return false;
     }
 }

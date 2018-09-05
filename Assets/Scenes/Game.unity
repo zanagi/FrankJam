@@ -1241,6 +1241,11 @@ Prefab:
       propertyPath: neighbors.Array.size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
+        type: 2}
+      propertyPath: action1.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4803389260795802, guid: d0d50474f5788ff478d37d0c28ea7886, type: 2}
       propertyPath: m_LocalPosition.x
       value: 3.46
@@ -1328,6 +1333,81 @@ Prefab:
       propertyPath: neighbors.Array.data[1]
       value: 
       objectReference: {fileID: 1276640991}
+    - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
+        type: 2}
+      propertyPath: actionName1
+      value: Small Event
+      objectReference: {fileID: 0}
+    - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
+        type: 2}
+      propertyPath: actionName2
+      value: Big Event
+      objectReference: {fileID: 0}
+    - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
+        type: 2}
+      propertyPath: action1.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
+        type: 2}
+      propertyPath: action1.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
+        type: 2}
+      propertyPath: action1.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2024569603}
+    - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
+        type: 2}
+      propertyPath: buff1.name
+      value: Band Event
+      objectReference: {fileID: 0}
+    - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
+        type: 2}
+      propertyPath: buff1.time
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
+        type: 2}
+      propertyPath: buff1.visibilityBuff
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
+        type: 2}
+      propertyPath: buff1.waitTimeBuff
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
+        type: 2}
+      propertyPath: buff2.name
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
+        type: 2}
+      propertyPath: buff2.time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
+        type: 2}
+      propertyPath: buff2.visibilityBuff
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
+        type: 2}
+      propertyPath: buff2.waitTimeBuff
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
+        type: 2}
+      propertyPath: buff2.cost
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
+        type: 2}
+      propertyPath: buff1.cost
+      value: 5000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0d50474f5788ff478d37d0c28ea7886, type: 2}
   m_IsPrefabAsset: 0
@@ -7940,6 +8020,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2024569603 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1672263430648348, guid: d0d50474f5788ff478d37d0c28ea7886,
+    type: 2}
+  m_PrefabInternal: {fileID: 347322825}
 --- !u!1001 &2051972435
 Prefab:
   m_ObjectHideFlags: 0

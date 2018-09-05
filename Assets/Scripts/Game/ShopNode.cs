@@ -3,18 +3,23 @@ using System.Collections;
 
 public class ShopNode : Node
 {
-    public float visibility = 25f;
-    public float waitTime = 5f;
+    private Shop shop;
 
     protected override void CheckSprite() { }
     public override void CheckNeighbors() { }
+
+    private void Start()
+    {
+        shop = GetComponent<Shop>();
+    }
 
     public override bool Wait(Frank frank, float time)
     {
         frank.waitTime += time;
 
-        if (frank.waitTime >= waitTime)
+        if (frank.waitTime >= shop.TotalWaitTime)
         {
+            shop.OnFrankContact(frank);
             frank.waitTime = 0;
             return true;
         }
@@ -28,7 +33,7 @@ public class ShopNode : Node
         if (frank)
         {
             var rng = Random.Range(0, 100);
-            if (rng <= visibility)
+            if (rng <= shop.TotalVisibility)
             {
                 if (neighbors.Count == 0)
                     neighbors.Add(frank.targetNode);

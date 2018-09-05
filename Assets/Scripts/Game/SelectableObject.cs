@@ -13,7 +13,7 @@ public abstract class SelectableObject : MonoBehaviour
         if (windowPrefab)
         {
             windowInstance = Instantiate(windowPrefab, GameManager.Instance.selectableWindowTransform);
-            windowInstance.gameObject.SetActive(false);
+            windowInstance.Init(this);
         }
     }
 
@@ -54,8 +54,6 @@ public abstract class SelectableObject : MonoBehaviour
         if (viewportPos.y > 0.5f)
             pivot.y = 1;
         windowInstance.SetPivot(pivot);
-        windowInstance.transform.position =
-            GameManager.Instance.GameCamera.Camera.WorldToScreenPoint(transform.position);
     }
 
     protected virtual void HideWindow()
