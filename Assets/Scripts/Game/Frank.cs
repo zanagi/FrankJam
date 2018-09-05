@@ -6,14 +6,15 @@ public class Frank : MonoBehaviour {
     
     public int speed = 1;
     public Node targetNode;
+	public SpriteRenderer spriteRenderer;
 
-    [HideInInspector]
+	[HideInInspector]
     public float waitTime;
 
     private Node previousNode;
     private List<Node> visitedNodes;
-    public SpriteRenderer spriteRenderer;
-
+	private Animator animator;
+	private float animatorSpeed;
 
 	// Use this for initialization
 	void Start ()
@@ -23,14 +24,22 @@ public class Frank : MonoBehaviour {
         SetNextNode();
 
         // Animator delay
-        var animator = GetComponentInChildren<Animator>();
+        animator = GetComponentInChildren<Animator>();
+		animatorSpeed = animator.speed;
         animator.Update(Random.Range(0.0f, 1.0f));
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-		if(targetNode)
+		if(!GameManager.Instance.IsIdle)
+		{
+			animator.speed = 0.0f;
+			return;
+		}
+		animator.speed = animatorSpeed;
+
+		if (targetNode)
         {
             var delta = targetNode.transform.position - transform.position;
             var distance = delta.magnitude;

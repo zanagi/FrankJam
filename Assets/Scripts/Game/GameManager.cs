@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum GameState
 {
@@ -22,6 +23,10 @@ public class GameManager : MonoBehaviour {
 	[HideInInspector]
 	public int frankCount, startFrankCount;
 
+	// Intro
+	public Image introScreen;
+	public float introWaitTime, introFadeTime;
+
 	void Awake ()
     {
         if (Instance)
@@ -31,6 +36,34 @@ public class GameManager : MonoBehaviour {
         MoneyText = GetComponentInChildren<MoneyText>();
         MoneyText.SetNumber(money, true);
 		frankCount = startFrankCount = FindObjectsOfType<Frank>().Length;
+
+		// Intro
+		GameState = GameState.Cutscene;
+		introScreen.gameObject.SetActive(true);
+		StartCoroutine(PlayIntro());
+	}
+
+	private IEnumerator PlayIntro()
+	{
+		var t = 0.0f;
+		var frameTime = 0.02f;
+		while (t <= introWaitTime)
+		{
+			if (Input.GetMouseButtonDown(0))
+				break;
+			t += frameTime;
+			yield return new WaitForSecondsRealtime(frameTime);
+		}
+
+		t = 0.0f;
+		while(t <= introFadeTime)
+		{
+			t += frameTime;
+			introScreen.SetAlpha(1.0f - t / introFadeTime);
+			yield return new WaitForSecondsRealtime(frameTime);
+		}
+		introScreen.gameObject.SetActive(false);
+		GameState = GameState.Idle;
 	}
 
     private void Update()
