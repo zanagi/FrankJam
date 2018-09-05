@@ -16,8 +16,8 @@ public class GameCamera : MonoBehaviour {
     public void HandleUpdate()
     {
         var time = Time.deltaTime;
-        HandleMove(time);
         HandleZoom(time);
+        HandleMove(time);
     }
 
     public void HandleFixedUpdate()
