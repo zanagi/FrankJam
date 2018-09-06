@@ -38,4 +38,14 @@ public class ShopBuff
         return name.ToUpper();
         // return string.Format("{0} ({1})", name, cost);
     }
+
+    public virtual string EndText(Shop shop)
+    {
+        return string.Format("{0} ended at {1}.", name, shop.shopName);
+    }
+
+    public virtual string StartText(Shop shop)
+    {
+        return string.Format("Started {0} at {1}", name, shop.shopName);
+    }
 }

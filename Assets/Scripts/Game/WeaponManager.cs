@@ -7,6 +7,9 @@ public class WeaponManager : MonoBehaviour {
 
     public int poisons, bombs;
     public Text poisonCountText, bombCountText;
+    public GameObject bombPrefab;
+    public LayerMask shopLayer;
+    public PoisonBuff poisonBuff;
 
     public void AddPoison(int count)
     {
@@ -34,8 +37,20 @@ public class WeaponManager : MonoBehaviour {
         {
             if (poisons > 0)
             {
-
-                Debug.Log("poison..");
+                var worldPos = GameManager.Instance.GameCamera.PointerWorldPos;
+                var info = Physics2D.Raycast(worldPos, Vector2.up, 0.01f, shopLayer);
+                if (info.collider)
+                {
+                    var shop = info.collider.GetComponent<Shop>();
+                    if(shop)
+                    {
+                        shop.AddBuff(poisonBuff.Clone());
+                        AddPoison(-1);
+                        return;
+                    }
+                }
+                GameManager.Instance.notificationManager.ShowNotification(
+                        "You must use poison on a bar!", NotificationId.Poison2);
             }
             else
             {
@@ -50,8 +65,11 @@ public class WeaponManager : MonoBehaviour {
         {
             if(bombs > 0)
             {
-
-                Debug.Log("Bomb..");
+                var worldPos = GameManager.Instance.GameCamera.Camera.ScreenToWorldPoint(Input.mousePosition);
+                worldPos.z = 0;
+                var bomb = Instantiate(bombPrefab);
+                bomb.transform.position = worldPos;
+                AddBombs(-1);
             } else
             {
                 GameManager.Instance.notificationManager.ShowNotification(

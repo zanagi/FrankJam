@@ -1419,6 +1419,16 @@ MonoBehaviour:
   bombs: 0
   poisonCountText: {fileID: 114782139195097424}
   bombCountText: {fileID: 114727939095519422}
+  bombPrefab: {fileID: 1755858788936248, guid: faf2d72e761dddc4bbc38ad0c8cde643, type: 2}
+  shopLayer:
+    serializedVersion: 2
+    m_Bits: 1
+  poisonBuff:
+    name: Poison
+    time: 30
+    visibilityBuff: 0
+    waitTimeBuff: 0
+    cost: 0
 --- !u!114 &114228632945663136
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1947,7 +1957,7 @@ MonoBehaviour:
   introScreen: {fileID: 225994443949807010}
   introButton: {fileID: 114442401345566812}
   introWaitTime: 4
-  introFadeTime: 1
+  introFadeTime: 0.8
   pauseScreen: {fileID: 1969170093231212}
   gameOverScreen: {fileID: 1720677805095588}
   winScreen: {fileID: 1783479754256526}

@@ -48,8 +48,10 @@ public class Shop : SelectableObject {
         var count = buffs.Count;
         for(int i = count - 1; i >= 0; i--)
         {
-            if(buffs[i].UpdateTime(Time.deltaTime))
+            if (buffs[i].UpdateTime(Time.deltaTime))
             {
+                GameManager.Instance.notificationManager.ShowNotification(
+                    buffs[i].EndText(this));
                 buffs.RemoveAt(i);
             }
         }
@@ -72,7 +74,7 @@ public class Shop : SelectableObject {
         if (GameManager.Instance.SpendMoney(buff.cost))
         {
             GameManager.Instance.notificationManager.
-                ShowNotification(string.Format("Started {0} at {1}", buff.name, shopName));
+                ShowNotification(buff.StartText(this));
             buffs.Add(buff.Clone());
         } else
         {

@@ -43,4 +43,14 @@ public class GameCamera : MonoBehaviour {
                 (transform.position, Camera.ViewportToWorldPoint(Vector3.zero),
                 Camera.ViewportToWorldPoint(Vector3.one));
     }
+
+    public Vector3 PointerWorldPos
+    {
+        get
+        {
+            var pos = Camera.ScreenToWorldPoint(Input.mousePosition);
+            pos.z = 0;
+            return pos;
+        }
+    }
 }

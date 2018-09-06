@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[System.Serializable]
 public class PoisonBuff : ShopBuff
 {
     public PoisonBuff(string name, float time, float visibilityBuff, float waitTimeBuff, int cost)
@@ -19,5 +20,15 @@ public class PoisonBuff : ShopBuff
         GameManager.Instance.notificationManager.ShowNotification(
             "Killed Frank by poison at " + shop.name);
         frank.Die();
+    }
+
+    public override string EndText(Shop shop)
+    {
+        return string.Format("Drinks at {0} no longer poisoned.", shop.name);
+    }
+
+    public override string StartText(Shop shop)
+    {
+        return string.Format("Drinks poisoned at {0}.", shop.shopName);
     }
 }
