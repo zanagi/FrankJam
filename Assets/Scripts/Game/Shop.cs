@@ -15,6 +15,10 @@ public class Shop : SelectableObject {
     public float waitTime = 5f;
     private List<ShopBuff> buffs = new List<ShopBuff>();
 
+    // Particles
+    public GameObject particlePrefab;
+    private GameObject particleInstance;
+
     protected override void Start()
     {
         base.Start();
@@ -53,7 +57,25 @@ public class Shop : SelectableObject {
                 GameManager.Instance.notificationManager.ShowNotification(
                     buffs[i].EndText(this));
                 buffs.RemoveAt(i);
+                CheckParticleEnd();
             }
+        }
+    }
+
+    private void CheckParticleEnd()
+    {
+        var buffsLeft = false;
+        for (int i = buffs.Count - 1; i >= 0; i--)
+        {
+            if (buffs[i].GetType() != typeof(PoisonBuff))
+            {
+                buffsLeft = true;
+                break;
+            }
+        }
+        if (!buffsLeft)
+        {
+            particleInstance.SetActive(false);
         }
     }
 
@@ -73,6 +95,8 @@ public class Shop : SelectableObject {
         // TODO: Notification that buff is active
         if (GameManager.Instance.SpendMoney(buff.cost))
         {
+            if (!particleInstance)
+                particleInstance = Instantiate(particlePrefab, transform);
             GameManager.Instance.notificationManager.
                 ShowNotification(buff.StartText(this));
             buffs.Add(buff.Clone());

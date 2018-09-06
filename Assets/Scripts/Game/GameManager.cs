@@ -97,8 +97,6 @@ public class GameManager : MonoBehaviour {
 		}
 		introScreen.gameObject.SetActive(false);
 		GameState = GameState.Idle;
-
-        ShowGameOver(FindObjectOfType<Frank>());
     }
 
 	public void PauseGame()
@@ -153,6 +151,7 @@ public class GameManager : MonoBehaviour {
             yield return null;
         }
         frank.transform.SetParent(endTarget);
+        frank.finalSkip = false;
         t = 0.0f;
         var startBoat = endTarget.position;
         while(t < endTime)

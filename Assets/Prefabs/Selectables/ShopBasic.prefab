@@ -82,8 +82,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   windowPrefab: {fileID: 114163831955402276, guid: 8afb5faea056f7845a2599f79bbfbccb,
     type: 2}
+  windowInstance: {fileID: 0}
   shopName: Bar
   description: A cozy bar.
+  buff1:
+    name: 
+    time: 0
+    visibilityBuff: 0
+    waitTimeBuff: 0
+    cost: 0
+  visibility: 25
+  waitTime: 5
+  particlePrefab: {fileID: 1174175065651240, guid: b2d67b5b8f0b37f4692bd1029c4a9c33,
+    type: 2}
 --- !u!114 &114675153084086824
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -142,8 +153,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   neighbors: []
   gizmoColor: {r: 1, g: 0, b: 1, a: 1}
-  visibility: 50
-  waitTime: 5
 --- !u!212 &212866660286889006
 SpriteRenderer:
   m_ObjectHideFlags: 1
