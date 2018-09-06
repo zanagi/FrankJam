@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour {
 	private bool introStarted;
 
 	// Pause & other screens
-	public GameObject pauseScreen, gameOverScreen;
+	public GameObject pauseScreen, gameOverScreen, winScreen;
 
     // Spawning
     public Node[] spawnNodes;
@@ -112,6 +112,12 @@ public class GameManager : MonoBehaviour {
 		GameState = GameState.Idle;
 		pauseScreen.SetActive(false);
 	}
+
+    public void ShowWinScreen()
+    {
+        GameState = GameState.Pause;
+        winScreen.SetActive(true);
+    }
 
 	public void QuitGame()
 	{
