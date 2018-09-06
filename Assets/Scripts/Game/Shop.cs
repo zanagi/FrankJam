@@ -111,7 +111,7 @@ public class Shop : SelectableObject {
 			// Particles
             if (!particleInstance)
                 particleInstance = Instantiate(particlePrefab, transform);
-			if(!poisonParticleInstance && isPoison)
+			if(!poisonParticleInstance)
 				poisonParticleInstance = Instantiate(poisonParticlePrefab, transform);
 			particleInstance.SetActive(!isPoison);
 			poisonParticleInstance.SetActive(isPoison);
