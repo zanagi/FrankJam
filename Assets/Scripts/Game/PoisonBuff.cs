@@ -18,13 +18,13 @@ public class PoisonBuff : ShopBuff
     public override void OnFrankContact(Frank frank, Shop shop)
     {
         GameManager.Instance.notificationManager.ShowNotification(
-            "Killed Frank by poison at " + shop.name);
+            "Killed Frank by poison at " + shop.shopName);
         frank.Die();
     }
 
     public override string EndText(Shop shop)
     {
-        return string.Format("Drinks at {0} no longer poisoned.", shop.name);
+        return string.Format("Drinks at {0} no longer poisoned.", shop.shopName);
     }
 
     public override string StartText(Shop shop)

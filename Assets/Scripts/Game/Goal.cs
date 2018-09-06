@@ -12,7 +12,7 @@ public class Goal : MonoBehaviour {
         var frank = other.GetComponent<Frank>();
         if (frank)
         {
-            GameManager.Instance.ShowGameOver();
+            GameManager.Instance.ShowGameOver(frank);
         }
     }
 }

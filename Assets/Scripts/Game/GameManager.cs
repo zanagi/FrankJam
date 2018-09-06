@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour {
     public float FrankRatio { get { return 1.0f * frankCount / startFrankCount; } }
     public WeaponManager weaponManager { get; private set; }
 
-	public float money = 2000;
+	public float money = 2000, moneyGain = 50;
 	public Transform selectableWindowTransform;
 	[HideInInspector]
 	public float time;
@@ -40,6 +40,11 @@ public class GameManager : MonoBehaviour {
     public Node[] spawnNodes;
     public Frank frankPrefab;
     public GameObject deathIconPrefab;
+
+    // Game over
+    [Header("Game Over")]
+    public float cameraTime, endTime;
+    public Transform endTarget, endTarget2;
 
 	void Awake ()
     {
@@ -83,16 +88,6 @@ public class GameManager : MonoBehaviour {
 	private IEnumerator PlayIntroCoroutine()
 	{
 		var frameTime = 0.02f;
-		/*
-		var t = 0.0f;
-		while (t <= introWaitTime)
-		{
-			if (Input.GetMouseButtonDown(0))
-				break;
-			t += frameTime;
-			yield return new WaitForSecondsRealtime(frameTime);
-		}
-		*/
 		var t2 = 0.0f;
 		while(t2 <= introFadeTime)
 		{
@@ -102,6 +97,8 @@ public class GameManager : MonoBehaviour {
 		}
 		introScreen.gameObject.SetActive(false);
 		GameState = GameState.Idle;
+
+        ShowGameOver(FindObjectOfType<Frank>());
     }
 
 	public void PauseGame()
@@ -133,9 +130,38 @@ public class GameManager : MonoBehaviour {
 		LoadingScreen.Instance.ReloadScene();
 	}
 
-    public void ShowGameOver()
+    public void ShowGameOver(Frank frank)
     {
         GameState = GameState.Pause;
+        frank.finalSkip = true;
+        StartCoroutine(AnimateGameOver(frank));
+    }
+
+    private IEnumerator AnimateGameOver(Frank frank)
+    {
+        var t = 0.0f;
+        var frankStart = frank.transform.position;
+        var cameraStart = GameCamera.transform.position;
+        while(t < cameraTime)
+        {
+            t += Time.deltaTime;
+            frank.transform.position = Vector3.Lerp(frankStart, endTarget.position, t / cameraTime);
+            var camPos = Vector3.Lerp(cameraStart, endTarget.position, t / cameraTime);
+            camPos.z = cameraStart.z;
+            GameCamera.transform.position = camPos;
+            GameCamera.CheckBounds();
+            yield return null;
+        }
+        frank.transform.SetParent(endTarget);
+        t = 0.0f;
+        var startBoat = endTarget.position;
+        while(t < endTime)
+        {
+            t += Time.deltaTime;
+            endTarget.transform.position = Vector3.Lerp(
+                startBoat, endTarget2.position, t / endTime);
+            yield return null;
+        }
         gameOverScreen.SetActive(true);
     }
 
@@ -154,6 +180,8 @@ public class GameManager : MonoBehaviour {
             return;
         }
 		time += Time.deltaTime;
+        money += moneyGain * Time.deltaTime;
+        MoneyText.SetNumber((int)money);
 		GameCamera.HandleUpdate();
     }
 

@@ -11,7 +11,7 @@ public class Frank : MonoBehaviour {
 	[HideInInspector]
     public float waitTime;
     [HideInInspector]
-    public bool alive = true;
+    public bool finalSkip;
     public float animModifier = 3.0f;
 
     private Node previousNode;
@@ -19,7 +19,7 @@ public class Frank : MonoBehaviour {
 	private Animator animator;
 	private float animatorSpeed;
 	private static readonly string frontBool = "Front";
-    private static readonly float maxSpeed = 5.0f, baseSpeed = 1.0f;
+    private static readonly float maxSpeed = 3.0f, baseSpeed = 1.0f;
 
 	// Use this for initialization
 	void Start ()
@@ -39,7 +39,8 @@ public class Frank : MonoBehaviour {
     {
 		if(!GameManager.Instance.IsIdle)
 		{
-			animator.speed = 0.0f;
+            if(!finalSkip)
+			    animator.speed = 0.0f;
 			return;
 		}
         speed = baseSpeed + (maxSpeed - baseSpeed) * (1.0f - GameManager.Instance.FrankRatio);

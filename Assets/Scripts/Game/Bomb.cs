@@ -19,7 +19,7 @@ public class Bomb : MonoBehaviour {
 
     void Update ()
     {
-        if (!GameManager.Instance.IsIdle && time > 0)
+        if (!GameManager.Instance.IsIdle || time <= 0)
             return;
         time -= Time.deltaTime;
         transform.localPosition = startPos + 

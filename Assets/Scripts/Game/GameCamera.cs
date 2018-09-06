@@ -37,7 +37,11 @@ public class GameCamera : MonoBehaviour {
     {
         transform.position +=
             new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * speed * time;
+        CheckBounds();
+    }
 
+    public void CheckBounds()
+    {
         if (CameraBounds.Instance)
             transform.position = CameraBounds.Instance.GetPosInBounds
                 (transform.position, Camera.ViewportToWorldPoint(Vector3.zero),

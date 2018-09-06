@@ -729,7 +729,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1980674151652464
 GameObject:
   m_ObjectHideFlags: 1
@@ -1950,6 +1950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   money: 10000
+  moneyGain: 50
   selectableWindowTransform: {fileID: 224969282669985994}
   time: 0
   frankCount: 0
@@ -1976,6 +1977,10 @@ MonoBehaviour:
     type: 2}
   deathIconPrefab: {fileID: 1073734320701142, guid: 5a21f2fb49a64664bacfef97da6d9932,
     type: 2}
+  cameraTime: 1
+  endTime: 3
+  endTarget: {fileID: 0}
+  endTarget2: {fileID: 0}
 --- !u!114 &114511165859562986
 MonoBehaviour:
   m_ObjectHideFlags: 1
