@@ -6,7 +6,7 @@ public abstract class SelectableObject : MonoBehaviour
     protected static SelectableObject selected;
 
     public SelectableWindow windowPrefab;
-    protected SelectableWindow windowInstance;
+    public SelectableWindow windowInstance;
 
     protected virtual void Start()
     {
@@ -48,7 +48,6 @@ public abstract class SelectableObject : MonoBehaviour
             selected = null;
             HideWindow();
         }
-        Debug.Log("Deselect: " + name);
     }
 
     protected virtual void ShowWindow()

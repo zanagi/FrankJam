@@ -5889,177 +5889,44 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 702961389}
     m_Modifications:
-    - target: {fileID: 114762293372816626, guid: d0d50474f5788ff478d37d0c28ea7886,
-        type: 2}
-      propertyPath: neighbors.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4803389260795802, guid: d0d50474f5788ff478d37d0c28ea7886, type: 2}
+    - target: {fileID: 4689716682566650, guid: a76ba9d2b44ed9646b3f820da51ab22d, type: 2}
       propertyPath: m_LocalPosition.x
       value: -0.16
       objectReference: {fileID: 0}
-    - target: {fileID: 4803389260795802, guid: d0d50474f5788ff478d37d0c28ea7886, type: 2}
+    - target: {fileID: 4689716682566650, guid: a76ba9d2b44ed9646b3f820da51ab22d, type: 2}
       propertyPath: m_LocalPosition.y
       value: 3.38
       objectReference: {fileID: 0}
-    - target: {fileID: 4803389260795802, guid: d0d50474f5788ff478d37d0c28ea7886, type: 2}
+    - target: {fileID: 4689716682566650, guid: a76ba9d2b44ed9646b3f820da51ab22d, type: 2}
       propertyPath: m_LocalPosition.z
       value: -0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 4803389260795802, guid: d0d50474f5788ff478d37d0c28ea7886, type: 2}
+    - target: {fileID: 4689716682566650, guid: a76ba9d2b44ed9646b3f820da51ab22d, type: 2}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4803389260795802, guid: d0d50474f5788ff478d37d0c28ea7886, type: 2}
+    - target: {fileID: 4689716682566650, guid: a76ba9d2b44ed9646b3f820da51ab22d, type: 2}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4803389260795802, guid: d0d50474f5788ff478d37d0c28ea7886, type: 2}
+    - target: {fileID: 4689716682566650, guid: a76ba9d2b44ed9646b3f820da51ab22d, type: 2}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4803389260795802, guid: d0d50474f5788ff478d37d0c28ea7886, type: 2}
+    - target: {fileID: 4689716682566650, guid: a76ba9d2b44ed9646b3f820da51ab22d, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4803389260795802, guid: d0d50474f5788ff478d37d0c28ea7886, type: 2}
+    - target: {fileID: 4689716682566650, guid: a76ba9d2b44ed9646b3f820da51ab22d, type: 2}
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 1672263430648348, guid: d0d50474f5788ff478d37d0c28ea7886, type: 2}
-      propertyPath: m_Name
-      value: RailwayStation
-      objectReference: {fileID: 0}
-    - target: {fileID: 114762293372816626, guid: d0d50474f5788ff478d37d0c28ea7886,
-        type: 2}
-      propertyPath: neighbors.Array.data[0]
-      value: 
-      objectReference: {fileID: 487565136}
-    - target: {fileID: 114762293372816626, guid: d0d50474f5788ff478d37d0c28ea7886,
-        type: 2}
-      propertyPath: neighbors.Array.data[1]
-      value: 
-      objectReference: {fileID: 487565136}
-    - target: {fileID: 212866660286889006, guid: d0d50474f5788ff478d37d0c28ea7886,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: f07bddbd2069b7e40bf29edc1d3a90cd,
-        type: 3}
-    - target: {fileID: 4803389260795802, guid: d0d50474f5788ff478d37d0c28ea7886, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4803389260795802, guid: d0d50474f5788ff478d37d0c28ea7886, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 61813977176191238, guid: d0d50474f5788ff478d37d0c28ea7886,
-        type: 2}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.93
-      objectReference: {fileID: 0}
-    - target: {fileID: 61813977176191238, guid: d0d50474f5788ff478d37d0c28ea7886,
-        type: 2}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 61813977176191238, guid: d0d50474f5788ff478d37d0c28ea7886,
-        type: 2}
-      propertyPath: m_Offset.y
-      value: -0.0740028
-      objectReference: {fileID: 0}
-    - target: {fileID: 61813977176191238, guid: d0d50474f5788ff478d37d0c28ea7886,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 0.89488864
-      objectReference: {fileID: 0}
-    - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
-        type: 2}
-      propertyPath: shopName
-      value: Central Railway Station
-      objectReference: {fileID: 0}
-    - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
-        type: 2}
-      propertyPath: description
-      value: Trains
-      objectReference: {fileID: 0}
-    - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
-        type: 2}
-      propertyPath: buff1.name
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
-        type: 2}
-      propertyPath: buff1.cost
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
-        type: 2}
-      propertyPath: buff1.time
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
-        type: 2}
-      propertyPath: buff1.waitTimeBuff
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
-        type: 2}
-      propertyPath: buff1.visibilityBuff
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
-        type: 2}
-      propertyPath: visibility
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
-        type: 2}
-      propertyPath: buff2.name
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
-        type: 2}
-      propertyPath: buff2.visibilityBuff
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
-        type: 2}
-      propertyPath: buff2.time
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
-        type: 2}
-      propertyPath: buff2.waitTimeBuff
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
-        type: 2}
-      propertyPath: buff2.cost
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 61813977176191238, guid: d0d50474f5788ff478d37d0c28ea7886,
-        type: 2}
-      propertyPath: m_Offset.x
-      value: 0.003439039
-      objectReference: {fileID: 0}
-    - target: {fileID: 61813977176191238, guid: d0d50474f5788ff478d37d0c28ea7886,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 1.9590847
-      objectReference: {fileID: 0}
-    - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
-        type: 2}
-      propertyPath: waitTime
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d0d50474f5788ff478d37d0c28ea7886, type: 2}
+  m_SourcePrefab: {fileID: 100100000, guid: a76ba9d2b44ed9646b3f820da51ab22d, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1318913586 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4803389260795802, guid: d0d50474f5788ff478d37d0c28ea7886,
+  m_CorrespondingSourceObject: {fileID: 4689716682566650, guid: a76ba9d2b44ed9646b3f820da51ab22d,
     type: 2}
   m_PrefabInternal: {fileID: 1318913585}
 --- !u!1001 &1334145660

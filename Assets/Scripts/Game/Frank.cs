@@ -106,4 +106,10 @@ public class Frank : MonoBehaviour {
         previousNode = targetNode;
         targetNode = node;
     }
+
+    public void Die()
+    {
+        Destroy(gameObject);
+        GameManager.Instance.frankCount -= 1;
+    }
 }

@@ -94,7 +94,7 @@ public class Shop : SelectableObject {
     public void OnFrankContact(Frank frank)
     {
         for (int i = 0; i < buffs.Count; i++)
-            buffs[i].OnFrankContact(frank);
+            buffs[i].OnFrankContact(frank, this);
     }
 
     public float TotalWaitTime

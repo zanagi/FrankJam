@@ -16,10 +16,10 @@ public class ShopNode : Node
     public override bool Wait(Frank frank, float time)
     {
         frank.waitTime += time;
+        shop.OnFrankContact(frank);
 
         if (frank.waitTime >= shop.TotalWaitTime)
         {
-            shop.OnFrankContact(frank);
             frank.waitTime = 0;
             return true;
         }

@@ -17,7 +17,7 @@ public class ShopBuff
         this.cost = cost;
     }
 
-    public ShopBuff Clone()
+    public virtual ShopBuff Clone()
     {
         return new ShopBuff(name, time, visibilityBuff, waitTimeBuff, cost);
     }
@@ -28,7 +28,7 @@ public class ShopBuff
         return time <= 0;
     }
 
-    public virtual void OnFrankContact(Frank frank)
+    public virtual void OnFrankContact(Frank frank, Shop shop)
     {
         // Do nothing for normal buffs
     }

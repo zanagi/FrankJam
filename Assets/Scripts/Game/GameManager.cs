@@ -18,8 +18,9 @@ public class GameManager : MonoBehaviour {
     public bool IsIdle { get { return GameState == GameState.Idle; } }
 	public bool IsPaused { get { return GameState == GameState.Pause; } }
     public float FrankRatio { get { return 1.0f * frankCount / startFrankCount; } }
+    public WeaponManager weaponManager { get; private set; }
 
-	public int money = 2000;
+	public float money = 2000;
 	public Transform selectableWindowTransform;
 	[HideInInspector]
 	public float time;
@@ -46,8 +47,9 @@ public class GameManager : MonoBehaviour {
         Instance = this;
         GameCamera = GetComponentInChildren<GameCamera>();
         MoneyText = GetComponentInChildren<MoneyText>();
-        MoneyText.SetNumber(money, true);
+        MoneyText.SetNumber((int)money, true);
         notificationManager = GetComponentInChildren<NotificationManager>();
+        weaponManager = GetComponentInChildren<WeaponManager>();
 
 		// Intro
 		GameState = GameState.Cutscene;
@@ -113,7 +115,7 @@ public class GameManager : MonoBehaviour {
 		pauseScreen.SetActive(false);
 	}
 
-    public void ShowWinScreen()
+    public void Win()
     {
         GameState = GameState.Pause;
         winScreen.SetActive(true);
@@ -141,8 +143,15 @@ public class GameManager : MonoBehaviour {
 		if (!IsIdle)
 			return;
 		if (Input.GetKeyDown(KeyCode.Escape))
-			PauseGame();
-
+        {
+            PauseGame();
+            return;
+        }
+        if (frankCount == 0)
+        {
+            Win();
+            return;
+        }
 		time += Time.deltaTime;
 		GameCamera.HandleUpdate();
     }
@@ -160,7 +169,7 @@ public class GameManager : MonoBehaviour {
         if(money >= moneySpent)
         {
             money -= moneySpent;
-            MoneyText.SetNumber(money);
+            MoneyText.SetNumber((int)money);
             return true;
         }
         return false;

@@ -11,13 +11,13 @@ public class SelectableWindow : MonoBehaviour {
     private RectTransform rectTransform;
     private SelectableObject selectable;
 
-    public void Init(SelectableObject selectable)
+    public virtual void Init(SelectableObject selectable)
     {
         gameObject.SetActive(false);
         this.selectable = selectable;
     }
 
-    private void Update()
+    protected virtual void Update()
     {
         SetPosition();
     }
