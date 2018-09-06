@@ -46,7 +46,7 @@ public class WeaponManager : MonoBehaviour {
                     if(shop)
                     {
 						SFXManager.Instance.PlaySFX(poisonSfx);
-                        shop.AddBuff(poisonBuff.Clone());
+                        shop.AddBuff(poisonBuff.Clone(), true);
                         AddPoison(-1);
                         return;
                     }

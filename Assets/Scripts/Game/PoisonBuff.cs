@@ -4,7 +4,9 @@ using System.Collections;
 [System.Serializable]
 public class PoisonBuff : ShopBuff
 {
-    public PoisonBuff(string name, float time, float visibilityBuff, float waitTimeBuff, int cost)
+	private static string deathSfxName = "DeathPoison";
+
+	public PoisonBuff(string name, float time, float visibilityBuff, float waitTimeBuff, int cost)
         :base(name, time, visibilityBuff, waitTimeBuff, cost)
     {
 
@@ -19,7 +21,8 @@ public class PoisonBuff : ShopBuff
     {
         GameManager.Instance.notificationManager.ShowNotification(
             "Killed Frank by poison at " + shop.shopName);
-        frank.Die();
+		SFXManager.Instance.PlaySFX(deathSfxName);
+		frank.Die();
     }
 
     public override string EndText(Shop shop)

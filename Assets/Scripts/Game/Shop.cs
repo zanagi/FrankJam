@@ -16,8 +16,8 @@ public class Shop : SelectableObject {
     private List<ShopBuff> buffs = new List<ShopBuff>();
 
     // Particles
-    public GameObject particlePrefab;
-    private GameObject particleInstance;
+    public GameObject particlePrefab, poisonParticlePrefab;
+    private GameObject particleInstance, poisonParticleInstance;
 	private static string partySfx = "Party";
 
     protected override void Start()
@@ -78,30 +78,53 @@ public class Shop : SelectableObject {
         {
             particleInstance.SetActive(false);
         }
-    }
 
-    public void AddBuff(ShopBuff buff)
+		var poisonFound = false;
+		for (int i = buffs.Count - 1; i >= 0; i--)
+		{
+			if (buffs[i].GetType() == typeof(PoisonBuff))
+			{
+				poisonFound = true;
+				break;
+			}
+		}
+		if (!poisonFound)
+		{
+			poisonParticleInstance.SetActive(false);
+		}
+	}
+
+    public void AddBuff(ShopBuff buff, bool isPoison = false)
     {
         for (int i = 0; i < buffs.Count; i++)
         {
             if (buffs[i].name == buff.name)
             {
-                // TODO: Notification that buff is active
                 GameManager.Instance.notificationManager.ShowNotification(
                     "That event is ongoing!", NotificationId.Event);
                 return;
             }
         }
 
-        // TODO: Notification that buff is active
         if (GameManager.Instance.SpendMoney(buff.cost))
         {
+			// Particles
             if (!particleInstance)
                 particleInstance = Instantiate(particlePrefab, transform);
+			if(!poisonParticleInstance && isPoison)
+				poisonParticleInstance = Instantiate(poisonParticlePrefab, transform);
+			particleInstance.SetActive(!isPoison);
+			poisonParticleInstance.SetActive(isPoison);
+
+			// Sound & notification
 			SFXManager.Instance.PlaySFX(partySfx);
             GameManager.Instance.notificationManager.
                 ShowNotification(buff.StartText(this));
+
+			// Buff
             buffs.Add(buff.Clone());
+
+			// Deselect window after buying event
             OnDeselect();
         } else
         {
