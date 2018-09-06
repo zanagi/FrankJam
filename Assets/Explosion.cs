@@ -10,6 +10,8 @@ public class Explosion : MonoBehaviour {
 
         if(frank)
         {
+            GameManager.Instance.notificationManager.ShowNotification(
+                "Killed Frank by a bomb explosion!");
             frank.Die();
         }
     }

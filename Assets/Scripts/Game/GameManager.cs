@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour {
     // Spawning
     public Node[] spawnNodes;
     public Frank frankPrefab;
+    public GameObject deathIconPrefab;
 
 	void Awake ()
     {

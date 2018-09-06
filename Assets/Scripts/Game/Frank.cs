@@ -109,6 +109,7 @@ public class Frank : MonoBehaviour {
 
     public void Die()
     {
+        Instantiate(GameManager.Instance.deathIconPrefab, transform.position, Quaternion.identity);
         Destroy(gameObject);
         GameManager.Instance.frankCount -= 1;
     }

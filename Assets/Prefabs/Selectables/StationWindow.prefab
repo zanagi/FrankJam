@@ -487,7 +487,7 @@ MonoBehaviour:
   price: {fileID: 0}
   description: {fileID: 0}
   actionButton1: {fileID: 0}
-  bombPrice: 3000
+  bombPrice: 3500
   poisonPrice: 2000
   bombPriceText: {fileID: 114320539025246264}
   poisonPriceText: {fileID: 114608461158775114}

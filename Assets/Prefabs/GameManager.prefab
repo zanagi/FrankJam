@@ -1974,6 +1974,8 @@ MonoBehaviour:
   - {fileID: 0}
   frankPrefab: {fileID: 114593631816746538, guid: c23fb8d929c301e45a3b5356ac4558ee,
     type: 2}
+  deathIconPrefab: {fileID: 1073734320701142, guid: 5a21f2fb49a64664bacfef97da6d9932,
+    type: 2}
 --- !u!114 &114511165859562986
 MonoBehaviour:
   m_ObjectHideFlags: 1
