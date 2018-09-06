@@ -6274,59 +6274,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a6e6fb2a4e89d74d80be2cc69eefce4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1306867408 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1321798466953256, guid: 9f42c6fe3b2d5264a8183d5c36b77685,
-    type: 2}
-  m_PrefabInternal: {fileID: 409872625}
---- !u!114 &1306867409
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1306867408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fc98219a83dff145947365dc914d06e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TapThreshold: 0.2
-  SwipeThreshold: 100
-  ReferenceDpi: 200
-  GuiLayers:
-    serializedVersion: 2
-    m_Bits: 4294967291
-  RecordFingers: 1
-  RecordThreshold: 5
-  RecordLimit: 10
-  SimulateMultiFingers: 1
-  PinchTwistKey: 306
-  MultiDragKey: 308
-  FingerTexture: {fileID: 2800000, guid: 25c48be3a87ea0f489a6d41c9c9a2194, type: 3}
---- !u!114 &1306867410
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1306867408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3d7700cab352a54cae495532d27dc5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sfxPrefabs: []
---- !u!114 &1306867411
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1306867408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc48d4497488ee84bb4e3494b8d7b541, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
 --- !u!1001 &1309598889
 Prefab:
   m_ObjectHideFlags: 0

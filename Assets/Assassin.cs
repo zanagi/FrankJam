@@ -61,8 +61,10 @@ public class Assassin : SelectableObject {
 	{
 		if (!GameManager.Instance.IsIdle)
 		{
+			animator.speed = 0.0f;
 			return;
 		}
+		animator.speed = animatorSpeed;
 		base.Update();
 
 		if (targetNode)

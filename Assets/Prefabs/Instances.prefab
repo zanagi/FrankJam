@@ -58,9 +58,9 @@ GameObject:
   - component: {fileID: 114253850864805098}
   - component: {fileID: 114695450156594638}
   - component: {fileID: 114685979927774064}
-  - component: {fileID: 114408669641545036}
   - component: {fileID: 114390245007498886}
   - component: {fileID: 114027885728269800}
+  - component: {fileID: 114823265375421184}
   m_Layer: 10
   m_Name: Instances
   m_TagString: Untagged
@@ -266,30 +266,6 @@ MonoBehaviour:
   - {fileID: 82917337681216038, guid: f6792175b1497c0459bc6960a94dc57a, type: 2}
   - {fileID: 82371771253455046, guid: 021a8a24c69b6fa4b9e920c847d98758, type: 2}
   - {fileID: 82669409662767018, guid: c8572f6471dc65647bcb2e94c64d59b5, type: 2}
---- !u!114 &114408669641545036
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1321798466953256}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fc98219a83dff145947365dc914d06e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TapThreshold: 0.2
-  SwipeThreshold: 100
-  ReferenceDpi: 200
-  GuiLayers:
-    serializedVersion: 2
-    m_Bits: 4294967291
-  RecordFingers: 1
-  RecordThreshold: 5
-  RecordLimit: 10
-  SimulateMultiFingers: 1
-  PinchTwistKey: 306
-  MultiDragKey: 308
-  FingerTexture: {fileID: 2800000, guid: 25c48be3a87ea0f489a6d41c9c9a2194, type: 3}
 --- !u!114 &114664075972408260
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -354,6 +330,30 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114823265375421184
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1321798466953256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fc98219a83dff145947365dc914d06e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TapThreshold: 0.2
+  SwipeThreshold: 100
+  ReferenceDpi: 200
+  GuiLayers:
+    serializedVersion: 2
+    m_Bits: 4294967291
+  RecordFingers: 1
+  RecordThreshold: 5
+  RecordLimit: 10
+  SimulateMultiFingers: 1
+  PinchTwistKey: 306
+  MultiDragKey: 308
+  FingerTexture: {fileID: 2800000, guid: 25c48be3a87ea0f489a6d41c9c9a2194, type: 3}
 --- !u!114 &114858531482674136
 MonoBehaviour:
   m_ObjectHideFlags: 1
