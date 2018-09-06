@@ -49,6 +49,9 @@ public class GameManager : MonoBehaviour {
     // Bounty
     public int baseBounty, bountyIncrease;
 
+	//
+	public SelectableObject main;
+
 	void Awake ()
     {
         if (Instance)
@@ -172,7 +175,7 @@ public class GameManager : MonoBehaviour {
 	{
 		if (!IsIdle)
 			return;
-		if (Input.GetKeyDown(KeyCode.Escape))
+		if (Input.GetKeyDown(KeyCode.Escape) && (!SelectableObject.selected || SelectableObject.selected == main))
         {
             PauseGame();
             return;

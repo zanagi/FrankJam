@@ -3,7 +3,7 @@ using System.Collections;
 
 public class SelectableObject : MonoBehaviour
 {
-    protected static SelectableObject selected;
+    public static SelectableObject selected;
 
     public SelectableWindow windowPrefab;
     public SelectableWindow windowInstance;
@@ -37,6 +37,7 @@ public class SelectableObject : MonoBehaviour
             if (previousSelected == this)
                 return;
         }
+		SFXManager.Instance.PlaySFX(ButtonSound.sfxName);
         selected = this;
         ShowWindow();
     }

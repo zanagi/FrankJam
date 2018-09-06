@@ -23,6 +23,11 @@ public class SFXManager : MonoBehaviour {
 		StartCoroutine(PlaySFXEnum(bgmPrefab, position));
 	}
 	
+	public void PlaySFX(string name)
+	{
+		PlaySFX(name, Vector3.zero);
+	}
+
 	public void PlaySFX(string name, Vector3 position)
 	{
 		for (int i = 0; i < sfxPrefabs.Length; i++)

@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 222765487705545296}
   - component: {fileID: 114084095872417122}
   - component: {fileID: 114896822094382304}
+  - component: {fileID: 114738395431510296}
   m_Layer: 5
   m_Name: ActionButton
   m_TagString: Untagged
@@ -265,6 +266,17 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: A cozy drinking bar. Popular with the elderly, not so with teens.
+--- !u!114 &114738395431510296
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1097914550824188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7090afb25385021479b568fd4029ba67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114775345034669328
 MonoBehaviour:
   m_ObjectHideFlags: 1

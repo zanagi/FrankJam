@@ -1950,7 +1950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   money: 10000
-  moneyGain: 50
+  moneyGain: 25
   selectableWindowTransform: {fileID: 224969282669985994}
   time: 0
   frankCount: 0
@@ -1983,6 +1983,7 @@ MonoBehaviour:
   endTarget2: {fileID: 0}
   baseBounty: 1000
   bountyIncrease: 400
+  main: {fileID: 0}
 --- !u!114 &114511165859562986
 MonoBehaviour:
   m_ObjectHideFlags: 1

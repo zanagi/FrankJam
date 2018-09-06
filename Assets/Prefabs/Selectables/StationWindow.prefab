@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 222343274607186342}
   - component: {fileID: 114682314591435156}
   - component: {fileID: 114031835972080502}
+  - component: {fileID: 114454175222680982}
   m_Layer: 5
   m_Name: PoisonButton
   m_TagString: Untagged
@@ -57,6 +58,7 @@ GameObject:
   - component: {fileID: 222660929907840608}
   - component: {fileID: 114974919993470162}
   - component: {fileID: 114026172398078288}
+  - component: {fileID: 114121727237956398}
   m_Layer: 5
   m_Name: BombButton
   m_TagString: Untagged
@@ -289,6 +291,17 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 3, y: -3}
   m_UseGraphicAlpha: 1
+--- !u!114 &114121727237956398
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1291935532284920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7090afb25385021479b568fd4029ba67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114248402396757684
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -358,6 +371,17 @@ MonoBehaviour:
   m_Text: 'Bomb
 
 '
+--- !u!114 &114454175222680982
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1168446506169738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7090afb25385021479b568fd4029ba67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114502494644566184
 MonoBehaviour:
   m_ObjectHideFlags: 1
