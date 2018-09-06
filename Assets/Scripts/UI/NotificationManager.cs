@@ -13,6 +13,7 @@ public class NotificationManager : MonoBehaviour {
     public Transform notificationOrigin, notificationTarget;
     public float animTime, minWaitTime, maxWaitTime;
     private List<Notification> notifications = new List<Notification>();
+	private static string notificationSFX = "Notification";
 
 	public void ShowNotification(string text, NotificationId id = NotificationId.None)
     {
@@ -41,12 +42,13 @@ public class NotificationManager : MonoBehaviour {
 
         var notification = notifications[0];
 
-        // Show
+		// Show
         yield return AnimateTransform(notification.transform,
             notificationOrigin.transform.position, notificationTarget.transform.position);
 
-        // Wait
-        var t = 0.0f;
+		SFXManager.Instance.PlaySFX(notificationSFX);
+		// Wait
+		var t = 0.0f;
         while(t < maxWaitTime)
         {
             if (GameManager.Instance.IsIdle)

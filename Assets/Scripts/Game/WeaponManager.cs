@@ -10,6 +10,7 @@ public class WeaponManager : MonoBehaviour {
     public GameObject bombPrefab;
     public LayerMask shopLayer;
     public PoisonBuff poisonBuff;
+	private static string bombSfx = "PlantBomb", poisonSfx = "PlantPoison";
 
     public void AddPoison(int count)
     {
@@ -44,6 +45,7 @@ public class WeaponManager : MonoBehaviour {
                     var shop = info.collider.GetComponent<Shop>();
                     if(shop)
                     {
+						SFXManager.Instance.PlaySFX(poisonSfx);
                         shop.AddBuff(poisonBuff.Clone());
                         AddPoison(-1);
                         return;
@@ -64,8 +66,9 @@ public class WeaponManager : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             if(bombs > 0)
-            {
-                var worldPos = GameManager.Instance.GameCamera.Camera.ScreenToWorldPoint(Input.mousePosition);
+			{
+				SFXManager.Instance.PlaySFX(bombSfx);
+				var worldPos = GameManager.Instance.GameCamera.Camera.ScreenToWorldPoint(Input.mousePosition);
                 worldPos.z = 0;
                 var bomb = Instantiate(bombPrefab);
                 bomb.transform.position = worldPos;

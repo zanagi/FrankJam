@@ -108,19 +108,23 @@ public class GameManager : MonoBehaviour {
 
 	public void PauseGame()
 	{
+		SFXManager.Instance.PlaySFX("PauseOn");
 		GameState = GameState.Pause;
 		pauseScreen.SetActive(true);
 	}
 
 	public void UnpauseGame()
 	{
+		SFXManager.Instance.PlaySFX("PauseOff");
 		GameState = GameState.Idle;
 		pauseScreen.SetActive(false);
 	}
 
     public void Win()
-    {
-        GameState = GameState.Pause;
+	{
+		BGMManager.Instance.StopBGM();
+		SFXManager.Instance.PlaySFX("Win");
+		GameState = GameState.Pause;
         winScreen.SetActive(true);
     }
 
@@ -136,10 +140,11 @@ public class GameManager : MonoBehaviour {
 	}
 
     public void ShowGameOver(Frank frank)
-    {
-        GameState = GameState.Pause;
+	{
+		GameState = GameState.Pause;
         frank.finalSkip = true;
-        StartCoroutine(AnimateGameOver(frank));
+		BGMManager.Instance.StopBGM();
+		StartCoroutine(AnimateGameOver(frank));
     }
 
     private IEnumerator AnimateGameOver(Frank frank)
@@ -167,8 +172,9 @@ public class GameManager : MonoBehaviour {
             endTarget.transform.position = Vector3.Lerp(
                 startBoat, endTarget2.position, t / endTime);
             yield return null;
-        }
-        gameOverScreen.SetActive(true);
+		}
+		SFXManager.Instance.PlaySFX("GameOver");
+		gameOverScreen.SetActive(true);
     }
 
 	private void Update()
@@ -202,8 +208,9 @@ public class GameManager : MonoBehaviour {
     public bool SpendMoney(int moneySpent)
     {
         if(money >= moneySpent)
-        {
-            money -= moneySpent;
+		{
+			SFXManager.Instance.PlaySFX("Money");
+			money -= moneySpent;
             MoneyText.SetNumber((int)money);
             return true;
         }

@@ -8,6 +8,8 @@ public class Bomb : MonoBehaviour {
     public GameObject explosion;
     private Vector3 startPos;
     private SpriteRenderer spriteRenderer;
+	private float tickTime;
+	private static string tickSfx = "BombTick";
 
     private void Start()
     {
@@ -22,10 +24,19 @@ public class Bomb : MonoBehaviour {
         if (!GameManager.Instance.IsIdle || time <= 0)
             return;
         time -= Time.deltaTime;
+		tickTime -= Time.deltaTime;
         transform.localPosition = startPos + 
             new Vector3(Random.Range(-shaking, shaking), Random.Range(-shaking, shaking));
-        if (time <= 0)
-            Explode();
+		if (time <= 0)
+		{
+			Explode();
+			return;
+		}
+		if(tickTime <= 0)
+		{
+			tickTime += 1.0f;
+			SFXManager.Instance.PlaySFX(tickSfx);
+		}
 	}
     
 

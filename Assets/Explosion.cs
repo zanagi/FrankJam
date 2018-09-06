@@ -3,8 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Explosion : MonoBehaviour {
-    
-    private void OnTriggerEnter2D(Collider2D collision)
+
+	private static string sfxName = "Explosion", deathSfxName = "DeathBomb";
+
+	private void Start()
+	{
+		SFXManager.Instance.PlaySFX(sfxName);
+	}
+
+	private void OnTriggerEnter2D(Collider2D collision)
     {
         var frank = collision.GetComponent<Frank>();
 
@@ -12,7 +19,8 @@ public class Explosion : MonoBehaviour {
         {
             GameManager.Instance.notificationManager.ShowNotification(
                 "Killed Frank by a bomb explosion!");
-            frank.Die();
+			SFXManager.Instance.PlaySFX(deathSfxName);
+			frank.Die();
         }
     }
 }

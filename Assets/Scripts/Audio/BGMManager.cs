@@ -39,6 +39,11 @@ public class BGMManager : MonoBehaviour {
         }
     }
     
+	public void StopBGM()
+	{
+		StartCoroutine(StopCurrentBGM());
+	}
+
     private IEnumerator SetBGMEnum(AudioSource bgmPrefab, bool instant = false)
     {
 		if (currentSource && currentSource.name == bgmPrefab.name)

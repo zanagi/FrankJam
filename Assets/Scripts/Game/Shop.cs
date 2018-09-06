@@ -18,6 +18,7 @@ public class Shop : SelectableObject {
     // Particles
     public GameObject particlePrefab;
     private GameObject particleInstance;
+	private static string partySfx = "Party";
 
     protected override void Start()
     {
@@ -97,6 +98,7 @@ public class Shop : SelectableObject {
         {
             if (!particleInstance)
                 particleInstance = Instantiate(particlePrefab, transform);
+			SFXManager.Instance.PlaySFX(partySfx);
             GameManager.Instance.notificationManager.
                 ShowNotification(buff.StartText(this));
             buffs.Add(buff.Clone());
