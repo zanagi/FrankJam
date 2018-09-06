@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class SelectableWindow : MonoBehaviour {
 
-    public Text title, description;
-    public Button actionButton1, actionButton2;
+    public Text title, price, description;
+    public Button actionButton1;
     
     private RectTransform rectTransform;
     private SelectableObject selectable;

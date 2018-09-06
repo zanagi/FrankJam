@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum NotificationId
+{
+    None, Bomb, Poison, Money, Event
+}
+
 public class NotificationManager : MonoBehaviour {
 
     public Notification notificationPrefab;
@@ -9,12 +14,18 @@ public class NotificationManager : MonoBehaviour {
     public float animTime, minWaitTime, maxWaitTime;
     private List<Notification> notifications = new List<Notification>();
 
-	public void ShowNotification(string text)
+	public void ShowNotification(string text, NotificationId id = NotificationId.None)
     {
+        var count = notifications.Count;
+        for(int i = 0; i < count; i++)
+        {
+            if (notifications[i].id == id && id != NotificationId.None)
+                return;
+        }
         var notification = notificationPrefab.Spawn(transform);
         notification.transform.localScale = Vector3.one;
         notification.transform.localPosition = notificationOrigin.localPosition;
-        notification.SetText(text);
+        notification.SetValues(text, id);
         notifications.Add(notification);
 
         if(notifications.Count == 1)

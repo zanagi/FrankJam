@@ -4649,38 +4649,37 @@ Prefab:
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: shopName
-      value: Drink Bar G
+      value: Pub Pohjoisnapa
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: description
-      value: Classy bar with a wide selection of liquor. For some reason their ice
-        water is extremely popular.
+      value: Relatively small bar known for its ice water.
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: buff1.name
-      value: Drink Event
+      value: Free Ice Water
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: buff1.cost
-      value: 2000
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: buff1.time
-      value: 30
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: buff1.waitTimeBuff
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: buff1.visibilityBuff
-      value: 20
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
@@ -7220,11 +7219,6 @@ Prefab:
       propertyPath: spawnNodes.Array.data[9]
       value: 
       objectReference: {fileID: 1148910846}
-    - target: {fileID: 114079425362846278, guid: 9b328ebfdd2e3194992d881f0ccbe36d,
-        type: 2}
-      propertyPath: deltaSpeed
-      value: 33
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b328ebfdd2e3194992d881f0ccbe36d, type: 2}
   m_IsPrefabAsset: 0

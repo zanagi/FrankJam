@@ -35,6 +35,7 @@ public class ShopBuff
 
     public override string ToString()
     {
-        return string.Format("{0} ({1})", name, cost);
+        return name.ToUpper();
+        // return string.Format("{0} ({1})", name, cost);
     }
 }

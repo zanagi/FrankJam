@@ -9,7 +9,7 @@ public class Shop : SelectableObject {
     public string shopName = "Test";
     [TextArea]
     public string description = "Just a shop";
-    public ShopBuff buff1, buff2;
+    public ShopBuff buff1;
 
     public float visibility = 25f;
     public float waitTime = 5f;
@@ -18,8 +18,16 @@ public class Shop : SelectableObject {
     protected override void Start()
     {
         base.Start();
-        windowInstance.title.text = shopName;
-        windowInstance.description.text = description;
+        windowInstance.title.text = shopName.ToUpper();
+        if(buff1.cost > 0)
+            windowInstance.price.text = string.Format("{0} MK", buff1.cost);
+        else
+        {
+            windowInstance.price.gameObject.SetActive(false);
+            windowInstance.description.transform.localPosition
+                = windowInstance.price.transform.localPosition;
+        }
+        windowInstance.description.text = description.ToUpper();
 
         if(buff1.name.Length > 0)
         {
@@ -28,16 +36,6 @@ public class Shop : SelectableObject {
         } else
         {
             windowInstance.actionButton1.gameObject.SetActive(false);
-        }
-
-        if (buff2.name.Length > 0)
-        {
-            windowInstance.actionButton2.GetComponentInChildren<Text>().text = buff2.ToString();
-            windowInstance.actionButton2.onClick.AddListener(() => AddBuff(buff2));
-        }
-        else
-        {
-            windowInstance.actionButton2.gameObject.SetActive(false);
         }
     }
 
@@ -64,7 +62,8 @@ public class Shop : SelectableObject {
             if (buffs[i].name == buff.name)
             {
                 // TODO: Notification that buff is active
-                GameManager.Instance.notificationManager.ShowNotification("That event is ongoing!");
+                GameManager.Instance.notificationManager.ShowNotification(
+                    "That event is ongoing!", NotificationId.Event);
                 return;
             }
         }
@@ -78,7 +77,7 @@ public class Shop : SelectableObject {
         } else
         {
             GameManager.Instance.notificationManager.
-                ShowNotification("You don't have enough money!");
+                ShowNotification("You don't have enough money!", NotificationId.Money);
         }
     }
 
