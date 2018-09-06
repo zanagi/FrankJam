@@ -7211,6 +7211,11 @@ Prefab:
       propertyPath: endTarget2
       value: 
       objectReference: {fileID: 938039631}
+    - target: {fileID: 114500002090398936, guid: 9b328ebfdd2e3194992d881f0ccbe36d,
+        type: 2}
+      propertyPath: moneyGain
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b328ebfdd2e3194992d881f0ccbe36d, type: 2}
   m_IsPrefabAsset: 0

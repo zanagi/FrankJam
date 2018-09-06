@@ -99,9 +99,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a13d0da2e15dd164faac8b664dea6ac0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 5
+  time: 4
   shaking: 0.1
-  explosionTime: 1.5
+  explosionTime: 1
   explosionScale: 1
   explosion: {fileID: 1224504832762206}
 --- !u!114 &114774580665176078
