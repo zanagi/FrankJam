@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public abstract class SelectableObject : MonoBehaviour
+public class SelectableObject : MonoBehaviour
 {
     protected static SelectableObject selected;
 
@@ -52,6 +52,9 @@ public abstract class SelectableObject : MonoBehaviour
 
     protected virtual void ShowWindow()
     {
+        if (!windowInstance)
+            return;
+
         windowInstance.gameObject.SetActive(true);
         var viewportPos = 
             GameManager.Instance.GameCamera.Camera.WorldToViewportPoint(transform.position);

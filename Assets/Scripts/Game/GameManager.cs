@@ -46,6 +46,9 @@ public class GameManager : MonoBehaviour {
     public float cameraTime, endTime;
     public Transform endTarget, endTarget2;
 
+    // Bounty
+    public int baseBounty, bountyIncrease;
+
 	void Awake ()
     {
         if (Instance)
@@ -201,5 +204,13 @@ public class GameManager : MonoBehaviour {
             return true;
         }
         return false;
+    }
+
+    public void OnFrankKilled()
+    {
+        frankCount -= 1;
+        money += baseBounty;
+        baseBounty += bountyIncrease;
+        MoneyText.SetNumber((int)money);
     }
 }

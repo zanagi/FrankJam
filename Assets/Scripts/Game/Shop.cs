@@ -100,6 +100,7 @@ public class Shop : SelectableObject {
             GameManager.Instance.notificationManager.
                 ShowNotification(buff.StartText(this));
             buffs.Add(buff.Clone());
+            OnDeselect();
         } else
         {
             GameManager.Instance.notificationManager.
