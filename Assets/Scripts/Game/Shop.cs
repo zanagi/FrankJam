@@ -64,6 +64,7 @@ public class Shop : SelectableObject {
             if (buffs[i].name == buff.name)
             {
                 // TODO: Notification that buff is active
+                GameManager.Instance.notificationManager.ShowNotification("That event is ongoing!");
                 return;
             }
         }
@@ -71,8 +72,13 @@ public class Shop : SelectableObject {
         // TODO: Notification that buff is active
         if (GameManager.Instance.SpendMoney(buff.cost))
         {
-            Debug.Log("Added buff: " + buff.name);
+            GameManager.Instance.notificationManager.
+                ShowNotification(string.Format("Started {0} at {1}", buff.name, shopName));
             buffs.Add(buff.Clone());
+        } else
+        {
+            GameManager.Instance.notificationManager.
+                ShowNotification("You don't have enough money!");
         }
     }
 

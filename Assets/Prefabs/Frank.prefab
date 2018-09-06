@@ -167,10 +167,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09a25f4533bab67489031a33a97c17ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 1
   targetNode: {fileID: 0}
-  waitTime: 0
   spriteRenderer: {fileID: 212939664206645522}
+  waitTime: 0
+  alive: 1
 --- !u!212 &212299211906736970
 SpriteRenderer:
   m_ObjectHideFlags: 1

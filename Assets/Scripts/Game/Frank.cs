@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Frank : MonoBehaviour {
     
-    public int speed = 1;
+    public float speed = 1;
     public Node targetNode;
 	public SpriteRenderer spriteRenderer;
 
@@ -12,12 +12,14 @@ public class Frank : MonoBehaviour {
     public float waitTime;
     [HideInInspector]
     public bool alive = true;
+    public float animModifier = 3.0f;
 
     private Node previousNode;
     private List<Node> visitedNodes;
 	private Animator animator;
 	private float animatorSpeed;
 	private static readonly string frontBool = "Front";
+    private static readonly float maxSpeed = 5.0f, baseSpeed = 1.0f;
 
 	// Use this for initialization
 	void Start ()
@@ -40,7 +42,8 @@ public class Frank : MonoBehaviour {
 			animator.speed = 0.0f;
 			return;
 		}
-		animator.speed = animatorSpeed;
+        speed = baseSpeed + (maxSpeed - baseSpeed) * (1.0f - GameManager.Instance.FrankRatio);
+		animator.speed = Mathf.Min(animatorSpeed, animModifier * animatorSpeed * speed / maxSpeed);
 
 		if (targetNode)
         {

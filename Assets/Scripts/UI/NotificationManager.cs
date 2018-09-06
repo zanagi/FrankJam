@@ -1,0 +1,77 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class NotificationManager : MonoBehaviour {
+
+    public Notification notificationPrefab;
+    public Transform notificationOrigin, notificationTarget;
+    public float animTime, minWaitTime, maxWaitTime;
+    private List<Notification> notifications = new List<Notification>();
+
+	public void ShowNotification(string text)
+    {
+        var notification = notificationPrefab.Spawn(transform);
+        notification.transform.localScale = Vector3.one;
+        notification.transform.localPosition = notificationOrigin.localPosition;
+        notification.SetText(text);
+        notifications.Add(notification);
+
+        if(notifications.Count == 1)
+        {
+            StartCoroutine(AnimateNotification());
+        }
+    }
+
+    private IEnumerator AnimateNotification()
+    {
+        if (notifications.Count == 0)
+            yield break;
+
+        var notification = notifications[0];
+
+        // Show
+        yield return AnimateTransform(notification.transform,
+            notificationOrigin.transform.position, notificationTarget.transform.position);
+
+        // Wait
+        var t = 0.0f;
+        while(t < maxWaitTime)
+        {
+            if (GameManager.Instance.IsIdle)
+            {
+                t += Time.deltaTime;
+                if (notifications.Count > 1 && t >= minWaitTime)
+                    break;
+            }
+            yield return null;
+        }
+
+        // Hide
+        yield return AnimateTransform(notification.transform, 
+            notificationTarget.transform.position,
+            notificationOrigin.transform.position);
+        
+        // Remove notification
+        notifications.RemoveAt(0);
+        notification.Recycle();
+
+        if(notifications.Count > 0)
+            yield return AnimateNotification();
+    }
+
+    private IEnumerator AnimateTransform(Transform tr, Vector3 start, Vector3 end)
+    {
+        var t = 0.0f;
+        while (t < animTime)
+        {
+            if (GameManager.Instance.IsIdle)
+            {
+                t += Time.deltaTime;
+                tr.position = Vector3.Lerp(start, end, t / animTime);
+            }
+            yield return null;
+        }
+        tr.position = end;
+    }
+}

@@ -14,8 +14,10 @@ public class GameManager : MonoBehaviour {
     public GameCamera GameCamera { get; private set; }
     public GameState GameState { get; private set; }
     public MoneyText MoneyText { get; private set; }
+    public NotificationManager notificationManager { get; private set; }
     public bool IsIdle { get { return GameState == GameState.Idle; } }
 	public bool IsPaused { get { return GameState == GameState.Pause; } }
+    public float FrankRatio { get { return 1.0f * frankCount / startFrankCount; } }
 
 	public int money = 2000;
 	public Transform selectableWindowTransform;
@@ -33,6 +35,10 @@ public class GameManager : MonoBehaviour {
 	// Pause & other screens
 	public GameObject pauseScreen, gameOverScreen;
 
+    // Spawning
+    public Node[] spawnNodes;
+    public Frank frankPrefab;
+
 	void Awake ()
     {
         if (Instance)
@@ -41,13 +47,26 @@ public class GameManager : MonoBehaviour {
         GameCamera = GetComponentInChildren<GameCamera>();
         MoneyText = GetComponentInChildren<MoneyText>();
         MoneyText.SetNumber(money, true);
-		frankCount = startFrankCount = FindObjectsOfType<Frank>().Length;
+        notificationManager = GetComponentInChildren<NotificationManager>();
 
 		// Intro
 		GameState = GameState.Cutscene;
 		introScreen.gameObject.SetActive(true);
 		pauseScreen.SetActive(false);
-	}
+
+        // Spawn franks
+        SpawnFranks();
+    }
+
+    private void SpawnFranks()
+    {
+        for(int i = 0; i < spawnNodes.Length; i++)
+        {
+            var frank = Instantiate(frankPrefab);
+            frank.targetNode = spawnNodes[i];
+        }
+        frankCount = startFrankCount = spawnNodes.Length;
+    }
 
 	public void PlayIntro()
 	{
@@ -80,7 +99,7 @@ public class GameManager : MonoBehaviour {
 		}
 		introScreen.gameObject.SetActive(false);
 		GameState = GameState.Idle;
-	}
+    }
 
 	public void PauseGame()
 	{
