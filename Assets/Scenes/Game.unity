@@ -208,13 +208,12 @@ Prefab:
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: shopName
-      value: Bar Slummi
+      value: CRAFT BEER BAR
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: description
-      value: Bar so unknown that only few know of its existence. Rumors say that secret
-        meetings are held here.
+      value: Serving local craft beers on tap. For some reason Franks hate this bar.
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
@@ -4966,37 +4965,38 @@ Prefab:
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: shopName
-      value: Pub Pohjoisnapa
+      value: ARCTIC BAR
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: description
-      value: Relatively small bar known for its ice water.
+      value: Come here for really cold drinks! Ice water, cold cocktails, you name
+        it.
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: buff1.name
-      value: Free Ice Water
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: buff1.cost
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: buff1.time
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: buff1.waitTimeBuff
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: buff1.visibilityBuff
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
@@ -5744,22 +5744,23 @@ Prefab:
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: shopName
-      value: Bar Frankfurt
+      value: VIN-VIN BAR
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: description
-      value: A cozy bar popular with the elderly. Not so with teens.
+      value: Good selection of wine alongside their range of beers. Popular amongst
+        locals.
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: buff1.name
-      value: Jazz Event
+      value: Wine Event
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: buff1.cost
-      value: 5000
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
@@ -5774,12 +5775,12 @@ Prefab:
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: buff1.visibilityBuff
-      value: 30
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: visibility
-      value: 30
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 61813977176191238, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
@@ -6153,23 +6154,23 @@ Prefab:
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: shopName
-      value: Drink Bar G
+      value: ONE PINT BAR
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: description
-      value: Classy bar with a wide selection of liquor. For some reason their ice
-        water is extremely popular.
+      value: Popular for their weekly trivia night with different themes such as movie
+        or sport night.
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: buff1.name
-      value: Drink Event
+      value: Trivia Night
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: buff1.cost
-      value: 2000
+      value: 750
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
@@ -7120,18 +7121,18 @@ Prefab:
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: shopName
-      value: Drink Bar G
+      value: KOKO JAZZ CLUB
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: description
-      value: Classy bar with a wide selection of liquor. For some reason their ice
-        water is extremely popular.
+      value: Casual atmosphere with a lot of regulars. They have jazz gigs three days
+        a week.
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: buff1.name
-      value: Drink Event
+      value: Jazz Gig
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
@@ -7141,7 +7142,7 @@ Prefab:
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: buff1.time
-      value: 30
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
@@ -7151,12 +7152,12 @@ Prefab:
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: buff1.visibilityBuff
-      value: 20
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: visibility
-      value: 20
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
@@ -8586,27 +8587,27 @@ Prefab:
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: shopName
-      value: Bar Frankfurt
+      value: BASE BAR
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: description
-      value: A cozy bar popular with the elderly. Not so with teens.
+      value: Epic selection of beers. Kind of a dive bar feel but homely and welcoming.
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: buff1.name
-      value: Jazz Event
+      value: Game Night
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: buff1.cost
-      value: 5000
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: buff1.time
-      value: 30
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
@@ -9243,28 +9244,28 @@ Prefab:
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: shopName
-      value: Drink Bar G
+      value: SUVI BAR
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: description
-      value: Classy bar with a wide selection of liquor. For some reason their ice
-        water is extremely popular.
+      value: Serving Finnish summer punch all year long. Pretend the summer is here
+        in the long winter days.
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: buff1.name
-      value: Drink Event
+      value: Happy Hour
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: buff1.cost
-      value: 2000
+      value: 1500
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: buff1.time
-      value: 30
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
@@ -9274,7 +9275,7 @@ Prefab:
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: buff1.visibilityBuff
-      value: 20
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
