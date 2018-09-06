@@ -10,7 +10,7 @@ public class InputHandler : Singleton
     public bool PreviousTouched { get; private set; }
     public bool Tapped { get { return Touched && !PreviousTouched; } }
     public bool TouchReleased { get { return !Touched && PreviousTouched; } }
-    public float Zoom { get; private set; }
+    public float Zoom;
 
     private bool IsPointerOverUIObject(Vector2 pos)
     {
