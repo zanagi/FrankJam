@@ -15,6 +15,7 @@ public class GoalAlarm : MonoBehaviour {
 		{
 			if (frankCount == 0)
 			{
+				GameManager.Instance.notificationManager.ShowNotification("One of Franks is near Eira! You have to stop them!");
 				SFXManager.Instance.PlaySFX(alarmSfx);
 			}
 			frankCount++;
