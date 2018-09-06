@@ -179,6 +179,11 @@ public class GameManager : MonoBehaviour {
 
 	private void Update()
 	{
+		if(IsPaused && pauseScreen.activeSelf && Input.GetKeyDown(KeyCode.Escape))
+		{
+			UnpauseGame();
+			return;
+		}
 		if (!IsIdle)
 			return;
 		if (Input.GetKeyDown(KeyCode.Escape) && (!SelectableObject.selected || SelectableObject.selected == main))

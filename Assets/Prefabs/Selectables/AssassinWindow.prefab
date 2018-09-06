@@ -324,6 +324,7 @@ MonoBehaviour:
   price: {fileID: 114511903531753032}
   description: {fileID: 114917878030275528}
   actionButton1: {fileID: 114381934166249154}
+  margin: {x: 0, y: 36, z: 0}
 --- !u!114 &114909154012171176
 MonoBehaviour:
   m_ObjectHideFlags: 1

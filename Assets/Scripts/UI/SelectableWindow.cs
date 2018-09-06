@@ -7,7 +7,8 @@ public class SelectableWindow : MonoBehaviour {
 
     public Text title, price, description;
     public Button actionButton1;
-    
+	public Vector3 margin;
+
     private RectTransform rectTransform;
     private SelectableObject selectable;
 
@@ -25,7 +26,7 @@ public class SelectableWindow : MonoBehaviour {
     private void SetPosition()
     {
         transform.position =
-            GameManager.Instance.GameCamera.Camera.WorldToScreenPoint(selectable.transform.position);
+            GameManager.Instance.GameCamera.Camera.WorldToScreenPoint(selectable.transform.position) + margin;
     }
 
     public void SetPivot(Vector2 pivot)
