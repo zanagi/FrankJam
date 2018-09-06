@@ -100,6 +100,7 @@ public class GameManager : MonoBehaviour {
 		}
 		introScreen.gameObject.SetActive(false);
 		GameState = GameState.Idle;
+        // ShowGameOver(FindObjectOfType<Frank>());
     }
 
 	public void PauseGame()
