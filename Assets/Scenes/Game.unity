@@ -5505,6 +5505,7 @@ GameObject:
   - component: {fileID: 1279238570}
   - component: {fileID: 1279238569}
   - component: {fileID: 1279238568}
+  - component: {fileID: 1279238571}
   m_Layer: 0
   m_Name: Goal
   m_TagString: Untagged
@@ -5524,7 +5525,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0010086894, y: 0.47020578}
+  m_Offset: {x: 0.0010086894, y: 0.40755862}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5535,7 +5536,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6679826, y: 1.4104116}
+  m_Size: {x: 0.6679826, y: 1.2851173}
   m_EdgeRadius: 0
 --- !u!212 &1279238569
 SpriteRenderer:
@@ -5596,6 +5597,17 @@ Transform:
   m_Father: {fileID: 702961389}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1279238571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1279238567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6e6fb2a4e89d74d80be2cc69eefce4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1306867408 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1321798466953256, guid: 9f42c6fe3b2d5264a8183d5c36b77685,
@@ -5637,6 +5649,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sfxPrefabs: []
+--- !u!114 &1306867411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1306867408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc48d4497488ee84bb4e3494b8d7b541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
 --- !u!1001 &1309598889
 Prefab:
   m_ObjectHideFlags: 0
@@ -7295,10 +7319,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1783479754256526, guid: 9b328ebfdd2e3194992d881f0ccbe36d, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b328ebfdd2e3194992d881f0ccbe36d, type: 2}
   m_IsPrefabAsset: 0
@@ -7893,7 +7913,7 @@ Prefab:
         type: 2}
       propertyPath: targetNode
       value: 
-      objectReference: {fileID: 487565136}
+      objectReference: {fileID: 791332042}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c23fb8d929c301e45a3b5356ac4558ee, type: 2}
   m_IsPrefabAsset: 0

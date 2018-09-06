@@ -30,8 +30,8 @@ public class GameManager : MonoBehaviour {
 	public float introWaitTime, introFadeTime;
 	private bool introStarted;
 
-	// Pause
-	public GameObject pauseScreen;
+	// Pause & other screens
+	public GameObject pauseScreen, gameOverScreen;
 
 	void Awake ()
     {
@@ -104,6 +104,12 @@ public class GameManager : MonoBehaviour {
 	{
 		LoadingScreen.Instance.ReloadScene();
 	}
+
+    public void ShowGameOver()
+    {
+        GameState = GameState.Pause;
+        gameOverScreen.SetActive(true);
+    }
 
 	private void Update()
 	{

@@ -10,6 +10,8 @@ public class Frank : MonoBehaviour {
 
 	[HideInInspector]
     public float waitTime;
+    [HideInInspector]
+    public bool alive = true;
 
     private Node previousNode;
     private List<Node> visitedNodes;
