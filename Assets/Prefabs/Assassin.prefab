@@ -55,6 +55,7 @@ GameObject:
   - component: {fileID: 58141048902521096}
   - component: {fileID: 50754254400045222}
   - component: {fileID: 114209289887996072}
+  - component: {fileID: 114196649149079856}
   m_Layer: 0
   m_Name: Assassin
   m_TagString: Untagged
@@ -156,6 +157,51 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114196649149079856
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1917494277891552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83dcd8dace8b7fe449d796b980cb121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HideWithFinger: 0
+  DeselectOnUp: 0
+  OnSelect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114209289887996072}
+        m_MethodName: OnSelect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Lean.Touch.LeanSelectable+LeanFingerEvent, Assembly-CSharp-firstpass,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnSelectSet:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Lean.Touch.LeanSelectable+LeanFingerEvent, Assembly-CSharp-firstpass,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnSelectUp:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Lean.Touch.LeanSelectable+LeanFingerEvent, Assembly-CSharp-firstpass,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnDeselect:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  isSelected: 0
 --- !u!114 &114209289887996072
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -167,11 +213,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd28e5cd59cbce44ca0ec56f973159eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  windowPrefab: {fileID: 114791443262316808, guid: 3a717205f47af0d4c8d7c73a39cc8ea1,
+    type: 2}
+  windowInstance: {fileID: 0}
   speed: 1
   animatorSpeed: 0.6
   targetNode: {fileID: 0}
   spriteRenderer: {fileID: 212003237984079902}
+  background: {fileID: 212778362109991504}
+  normalColor: {r: 1, g: 0.9255016, b: 0.06132078, a: 0.5}
+  hiredColor: {r: 1, g: 0, b: 0, a: 0.5}
   animModifier: 3
+  hiringTime: 30
+  hired: 0
+  price: 2000
+  priceIncrease: 1000
 --- !u!212 &212003237984079902
 SpriteRenderer:
   m_ObjectHideFlags: 1

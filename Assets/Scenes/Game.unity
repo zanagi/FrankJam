@@ -8788,6 +8788,11 @@ Prefab:
       propertyPath: m_Name
       value: Assassin (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114209289887996072, guid: 3d21683b88b8c1542a1088eb5aed6950,
+        type: 2}
+      propertyPath: hiringTime
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d21683b88b8c1542a1088eb5aed6950, type: 2}
   m_IsPrefabAsset: 0
