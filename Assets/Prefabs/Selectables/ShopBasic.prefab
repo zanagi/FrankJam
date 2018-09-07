@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114245855650303966}
   - component: {fileID: 114762293372816626}
   - component: {fileID: 114675153084086824}
+  - component: {fileID: 114291280329528384}
   m_Layer: 0
   m_Name: ShopBasic
   m_TagString: Untagged
@@ -97,6 +98,21 @@ MonoBehaviour:
     type: 2}
   poisonParticlePrefab: {fileID: 1065784570299306, guid: c01a6e3d2fb438e489c24bb99e22ac6f,
     type: 2}
+--- !u!114 &114291280329528384
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1672263430648348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 422b42f5a57f7254a914bb9a935299c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  flashColor: {r: 1, g: 1, b: 1, a: 1}
+  normalScale: {x: 1, y: 1, z: 1}
+  flashScale: {x: 1.05, y: 1.05, z: 1.1}
 --- !u!114 &114675153084086824
 MonoBehaviour:
   m_ObjectHideFlags: 1
