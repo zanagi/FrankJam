@@ -46,7 +46,7 @@ public class Assassin : SelectableObject {
         if(hired)
         {
             GameManager.Instance.notificationManager.
-                ShowNotification("She's already hired!", NotificationId.Hire);
+                ShowNotification("That assassin is already hired!", NotificationId.Hire);
             return;
         }
 
