@@ -35,8 +35,19 @@ public class GameCamera : MonoBehaviour {
 
     private void HandleMove(float time)
     {
-        transform.position +=
-            new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * speed * time;
+        var delta = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        var mouseViewPos = Camera.ScreenToViewportPoint(Input.mousePosition);
+        var mouseDelta = GameManager.Instance.MouseDelta;
+        if (mouseViewPos.x > 0.99f && mouseDelta.x > 0)
+            delta.x = 1;
+        if (mouseViewPos.x < 0.01f && mouseDelta.x < 0)
+            delta.x = -1;
+        if (mouseViewPos.y > 0.99f && mouseDelta.y > 0)
+            delta.y = 1;
+        if (mouseViewPos.y < 0.01f && mouseDelta.y < 0)
+            delta.y = -1;
+        transform.position += delta * speed * time;
+
         CheckBounds();
     }
 

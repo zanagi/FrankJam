@@ -52,7 +52,10 @@ public class GameManager : MonoBehaviour {
 	//
 	public SelectableObject main;
 
-	void Awake ()
+    private Vector3 prevMousePos;
+    public Vector3 MouseDelta { get; private set; }
+
+    void Awake ()
     {
         if (Instance)
             return;
@@ -70,6 +73,8 @@ public class GameManager : MonoBehaviour {
 
         // Spawn franks
         SpawnFranks();
+
+        prevMousePos = Input.mousePosition;
     }
 
     private void SpawnFranks()
@@ -179,6 +184,8 @@ public class GameManager : MonoBehaviour {
 
 	private void Update()
 	{
+        MouseDelta = Input.mousePosition - prevMousePos;
+        prevMousePos = Input.mousePosition;
 		if(IsPaused && pauseScreen.activeSelf && Input.GetKeyDown(KeyCode.Escape))
 		{
 			UnpauseGame();
