@@ -74,6 +74,7 @@ public class BGMManager : MonoBehaviour {
                 yield return new WaitForFixedUpdate();
             }
             currentSource.volume = 0.0f;
+            Destroy(currentSource);
         }
     }
 
