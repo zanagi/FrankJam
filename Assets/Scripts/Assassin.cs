@@ -43,6 +43,13 @@ public class Assassin : SelectableObject {
 
 	private void Hire()
 	{
+        if(hired)
+        {
+            GameManager.Instance.notificationManager.
+                ShowNotification("She's already hired!", NotificationId.Hire);
+            return;
+        }
+
 		if(GameManager.Instance.SpendMoney(price))
 		{
 			background.color = hiredColor;

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum NotificationId
 {
-    None, Bomb, Poison, Poison2, Money, Event
+    None, Bomb, Poison, Poison2, Money, Event, Hire
 }
 
 public class NotificationManager : MonoBehaviour {
