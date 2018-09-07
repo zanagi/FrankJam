@@ -299,6 +299,7 @@ MonoBehaviour:
   bgmPrefabs:
   - {fileID: 82867776949773810, guid: 38f4533f3876e6b4fb71180c898cb5ed, type: 2}
   - {fileID: 82867432176505744, guid: 19edd8596861cef42a99766d70ad36c3, type: 2}
+  - {fileID: 82867432176505744, guid: 4ed82c637e841bc4da0d08304c7fa94d, type: 2}
 --- !u!114 &114695450156594638
 MonoBehaviour:
   m_ObjectHideFlags: 1
