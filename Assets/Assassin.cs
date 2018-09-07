@@ -146,4 +146,10 @@ public class Assassin : SelectableObject {
 			}
 		}
 	}
+    
+    public void Die()
+    {
+        Instantiate(GameManager.Instance.deathIconPrefab, transform.position, Quaternion.identity);
+        Destroy(gameObject);
+    }
 }

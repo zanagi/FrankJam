@@ -117,7 +117,8 @@ public class Shop : SelectableObject {
 			poisonParticleInstance.SetActive(isPoison);
 
 			// Sound & notification
-			SFXManager.Instance.PlaySFX(partySfx);
+            if(!isPoison)
+			    SFXManager.Instance.PlaySFX(partySfx);
             GameManager.Instance.notificationManager.
                 ShowNotification(buff.StartText(this));
 

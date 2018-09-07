@@ -22,5 +22,13 @@ public class Explosion : MonoBehaviour {
 			SFXManager.Instance.PlaySFX(deathSfxName);
 			frank.Die();
         }
+
+        var assassin = collision.GetComponent<Assassin>();
+        if(assassin)
+        {
+            GameManager.Instance.notificationManager.ShowNotification(
+                "Killed assassin by a bomb explosion!");
+            assassin.Die();
+        }
     }
 }
