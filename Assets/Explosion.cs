@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Explosion : MonoBehaviour {
 
-	private static string sfxName = "Explosion", deathSfxName = "DeathBomb";
+    private static string sfxName = "Explosion", deathSfxName = "DeathBomb", assDeathSfx = "AssassinDies";
 
 	private void Start()
 	{
@@ -28,6 +28,7 @@ public class Explosion : MonoBehaviour {
         {
             GameManager.Instance.notificationManager.ShowNotification(
                 "Killed assassin by a bomb explosion!");
+            SFXManager.Instance.PlaySFX(assDeathSfx);
             assassin.Die();
         }
     }

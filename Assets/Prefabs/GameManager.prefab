@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 114764164006812226}
   - component: {fileID: 114341660035810426}
   - component: {fileID: 114978520390229162}
+  - component: {fileID: 114357261106783824}
   m_Layer: 5
   m_Name: RestartButton
   m_TagString: Untagged
@@ -227,6 +228,7 @@ GameObject:
   - component: {fileID: 114533839115517662}
   - component: {fileID: 114568817530126454}
   - component: {fileID: 114162440625927410}
+  - component: {fileID: 114496684274615052}
   m_Layer: 5
   m_Name: ExitButton
   m_TagString: Untagged
@@ -390,6 +392,7 @@ GameObject:
   - component: {fileID: 114236767311027678}
   - component: {fileID: 114178350649698218}
   - component: {fileID: 114253807831640590}
+  - component: {fileID: 114624358040498092}
   m_Layer: 5
   m_Name: PlayAgainButton
   m_TagString: Untagged
@@ -427,6 +430,7 @@ GameObject:
   - component: {fileID: 114810304534943684}
   - component: {fileID: 114541663177785934}
   - component: {fileID: 114527055774599048}
+  - component: {fileID: 114630241334951922}
   m_Layer: 5
   m_Name: PlayAgainButton
   m_TagString: Untagged
@@ -461,6 +465,7 @@ GameObject:
   - component: {fileID: 114682400287797468}
   - component: {fileID: 114422851032580000}
   - component: {fileID: 114276170836328552}
+  - component: {fileID: 114558454127461382}
   m_Layer: 5
   m_Name: ExitButton
   m_TagString: Untagged
@@ -545,6 +550,7 @@ GameObject:
   - component: {fileID: 114670227775146448}
   - component: {fileID: 114442401345566812}
   - component: {fileID: 114319066146553404}
+  - component: {fileID: 114162603443436728}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -564,6 +570,7 @@ GameObject:
   - component: {fileID: 114095040966605866}
   - component: {fileID: 114181435957784458}
   - component: {fileID: 114021471331133316}
+  - component: {fileID: 114658624979836924}
   m_Layer: 5
   m_Name: ContinueButton
   m_TagString: Untagged
@@ -583,6 +590,7 @@ GameObject:
   - component: {fileID: 114442569292911690}
   - component: {fileID: 114092436288537098}
   - component: {fileID: 114631840883050496}
+  - component: {fileID: 114054673575456614}
   m_Layer: 5
   m_Name: ExitButton
   m_TagString: Untagged
@@ -941,6 +949,17 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 10/10
+--- !u!114 &114054673575456614
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1835939791425340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7090afb25385021479b568fd4029ba67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114056247965807406
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -999,7 +1018,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fc3e1f2bc04cc0419ba91cc7396a9b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deltaSpeed: 33
+  deltaSpeed: 99
 --- !u!114 &114092436288537098
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1162,6 +1181,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalSprite: {fileID: 21300000, guid: be8bb56d643aa78419bcf2a39b115954, type: 3}
   hoverSprite: {fileID: 21300000, guid: 1c040e3b4ff4737468a9d19685f43eff, type: 3}
+--- !u!114 &114162603443436728
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1802186113967594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7090afb25385021479b568fd4029ba67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114178073168532312
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1724,6 +1754,17 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114357261106783824
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1080608137738596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7090afb25385021479b568fd4029ba67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114360316978843386
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1938,6 +1979,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3389640c38fd67b4ebb53ee257085248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114496684274615052
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1348170822438170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7090afb25385021479b568fd4029ba67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114500002090398936
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2135,6 +2187,17 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114558454127461382
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1670624082584662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7090afb25385021479b568fd4029ba67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114568817530126454
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2201,6 +2264,28 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 3, y: -3}
   m_UseGraphicAlpha: 0
+--- !u!114 &114624358040498092
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1621390366319462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7090afb25385021479b568fd4029ba67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114630241334951922
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1662595117030410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7090afb25385021479b568fd4029ba67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114631840883050496
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2214,6 +2299,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalSprite: {fileID: 21300000, guid: be8bb56d643aa78419bcf2a39b115954, type: 3}
   hoverSprite: {fileID: 21300000, guid: 1c040e3b4ff4737468a9d19685f43eff, type: 3}
+--- !u!114 &114658624979836924
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1815872769773848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7090afb25385021479b568fd4029ba67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114670227775146448
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2949,7 +3045,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -100}
+  m_AnchoredPosition: {x: 0, y: -247}
   m_SizeDelta: {x: 206, y: 48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224142169793806054
@@ -3023,7 +3119,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -20}
+  m_AnchoredPosition: {x: 0, y: -167}
   m_SizeDelta: {x: 206, y: 48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224189454628442502
@@ -3231,7 +3327,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 60}
+  m_AnchoredPosition: {x: 0, y: -87}
   m_SizeDelta: {x: 206, y: 48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224438981206120716

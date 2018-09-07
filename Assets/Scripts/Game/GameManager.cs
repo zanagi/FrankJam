@@ -171,7 +171,8 @@ public class GameManager : MonoBehaviour {
         frank.finalSkip = false;
         t = 0.0f;
         var startBoat = endTarget.position;
-        while(t < endTime)
+        SFXManager.Instance.PlaySFX("Rowing");
+        while (t < endTime)
         {
             t += Time.deltaTime;
             endTarget.transform.position = Vector3.Lerp(
