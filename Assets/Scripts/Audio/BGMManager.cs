@@ -12,6 +12,7 @@ public class BGMManager : MonoBehaviour {
     private AudioSource[] bgmPrefabs;
 
     private AudioSource currentSource;
+    private bool settingBGM;
 
     private void Awake()
     {
@@ -46,9 +47,13 @@ public class BGMManager : MonoBehaviour {
 
     private IEnumerator SetBGMEnum(AudioSource bgmPrefab, bool instant = false)
     {
+        while (settingBGM)
+            yield return null;
+
 		if (currentSource && currentSource.name == bgmPrefab.name)
 			yield break;
 
+        settingBGM = true;
         if(!instant)
             yield return StopCurrentBGM();
 
@@ -62,6 +67,7 @@ public class BGMManager : MonoBehaviour {
 
         if (!instant)
             yield return FadeInCurrentBGM();
+        settingBGM = false;
     }
 
     private IEnumerator StopCurrentBGM()
