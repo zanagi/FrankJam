@@ -6235,7 +6235,7 @@ Prefab:
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: visibility
-      value: 25
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 61813977176191238, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
@@ -6592,7 +6592,7 @@ Prefab:
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: visibility
-      value: 20
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
@@ -7765,12 +7765,12 @@ Prefab:
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: buff1.visibilityBuff
-      value: 50
+      value: 69
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: visibility
-      value: 25
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
@@ -8317,7 +8317,7 @@ Prefab:
     - target: {fileID: 224189454628442502, guid: 9b328ebfdd2e3194992d881f0ccbe36d,
         type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 224438981206120716, guid: 9b328ebfdd2e3194992d881f0ccbe36d,
         type: 2}
@@ -8337,7 +8337,7 @@ Prefab:
     - target: {fileID: 224779724312705844, guid: 9b328ebfdd2e3194992d881f0ccbe36d,
         type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 224734885838482452, guid: 9b328ebfdd2e3194992d881f0ccbe36d,
         type: 2}
@@ -9109,7 +9109,7 @@ Prefab:
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: buff1.time
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
@@ -9119,12 +9119,12 @@ Prefab:
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: buff1.visibilityBuff
-      value: 30
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: visibility
-      value: 30
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0d50474f5788ff478d37d0c28ea7886, type: 2}
@@ -9762,7 +9762,7 @@ Prefab:
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: buff1.cost
-      value: 1500
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
@@ -9777,12 +9777,12 @@ Prefab:
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: buff1.visibilityBuff
-      value: 50
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
       propertyPath: visibility
-      value: 20
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 114245855650303966, guid: d0d50474f5788ff478d37d0c28ea7886,
         type: 2}
